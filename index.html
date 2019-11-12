@@ -66,16 +66,16 @@
 	</div>
 
 	<!-- header -->
-	<header class="wow fadeIn header">
+	<header id="header" class="wow fadeIn header">
 		<div class="container">
 			<div class="row align-items-center">
 				<div class="col-auto d-md-none">
 					<button type="button" id="header__call" class="header__call"><img src="img/icons/menu.svg" alt=""></button>
 				</div>
-				<div class="col-auto">
+				<div class="col-auto mr-auto">
 					<a href="/" class="header__logotype"><img src="img/visoplan-logo.svg" alt="Logo von Visoplan"></a>
 				</div>
-				<div class="col-auto mx-auto d-none d-md-block">
+				<div class="col-auto d-none d-md-block">
 					<nav class="header__nav">
 						<ul>
 							<li class="dropdown">
@@ -91,7 +91,7 @@
 						</ul>
 					</nav>
 				</div>
-				<div class="col-auto ml-auto">
+				<div class="col-auto col-lg-2 text-right ml-auto ml-md-0">
 					<a href="#" class="header__btn">
 						<img src="img/icons/download.svg" alt="Download icon"> Demo
 					</a>
@@ -101,11 +101,11 @@
 	</header>
 
 	<!-- welcome -->
-	<section class="welcome">
+	<section id="section-welcome" class="welcome">
 		<div class="container">
 			<div class="row justify-content-center justify-content-lg-start">
 				<div class="col-sm-10 col-md-8 col-lg-5 pt-4">
-					<h1 class="wow fadeInUp">Effizientes Management aller Bauplanungsphasen</h1>
+					<h1 class="wow fadeInUp welcome__title">Effizientes Management aller Bauplanungsphasen</h1>
 					<p class="wow fadeInUp mt-4 mt-md-5">Zentrale Controlling des BIM-Bauprojektes, beschleunigt Entscheidungen und senkt Kosten</p>
 					<form class="wow fadeInUp mt-4 mt-sm-5">
 						<div class="input-group">
@@ -121,7 +121,7 @@
 		</div>
 	</section>
 
-	<section class="section">
+	<section id="section-solutions" class="section">
 		<div class="container">
 			<div class="wow fadeInUp section__title text-center">Die eine BIM-Lösung für alle Baubeteiligten</div>
 			<div class="row justify-content-center justify-content-lg-start">
@@ -130,76 +130,84 @@
 					<img src="img/graphics/bim-kollaboration-mobile.svg" class="w-100 d-lg-none" alt="Alle Berufsgruppen arbeiten zentral zusammen">
 				</div>
 				<div class="col-sm-6 col-lg-3 text-center text-lg-right order-lg-1">
-					<div class="wow fadeInLeft mt-lg-4" data-wow-delay="0.3s">
-						<a href="#" class="h3 section__title section__title--style-link">Architekten und Bauingenieure</a>
+					<a href="#" class="wow fadeInLeft section__link mt-lg-4" data-wow-delay="0.3s">
+						<div class="h3">Architekten und Bauingenieure</div>
 						<p class="d-none d-md-block">Reibungslose Integration der IFC-Dateien aus Ihrer CAD-Anwendung</p>
-					</div>
-					<div class="wow fadeInLeft mt-md-5 mt-lg-4 mt-xl-5 pt-xl-4" data-wow-delay="0.4s">
-						<a href="#" class="h3 section__title section__title--style-link">Generalunternehmer und Bauunternehmer</a>
+					</a>
+					<a href="#" class="wow fadeInLeft section__link mt-md-5 mt-lg-4 mt-xl-5 pt-xl-4" data-wow-delay="0.4s">
+						<div class="h3">Generalunternehmer und Bauunternehmer</div>
 						<p class="d-none d-md-block">Optimaler Übergang von der Planungs- in die Bauphase, dank Dokumentation und Archivierung von Daten</p>
-					</div>
+					</a>
 				</div>
 				<div class="col-sm-6 col-lg-3 text-center text-lg-left order-lg-3">
-					<div class="wow fadeInRight mt-lg-4" data-wow-delay="0.5s">
-						<a href="#" class="h3 section__title section__title--style-link">Projektentwickler und Bauherren</a>
+					<a href="#" class="wow fadeInRight section__link mt-lg-4" data-wow-delay="0.5s">
+						<div class="h3">Projektentwickler und Bauherren</div>
 						<p class="d-none d-md-block">Zentrales Controlling des Bauprojektes: Alle BIM-Daten übersichtlich bei Visoplan</p>
-					</div>
-					<div class="wow fadeInRight mt-md-5" data-wow-delay="0.6s">
-						<a href="#" class="h3 section__title section__title--style-link">BIM Manager und Projektsteuerer</a>
+					</a>
+					<a href="#" class="wow fadeInRight section__link mt-md-5" data-wow-delay="0.6s">
+						<div class="h3">BIM Manager und Projektsteuerer</div>
 						<p class="d-none d-md-block">BIM-Management aller Daten verschiedener CAD-Systeme – Datenintegration auf IFC-Basis</p>
-					</div>
+					</a>
 				</div>
 			</div>
 		</div>
 	</section>
 
-	<section class="section section--mobile-gradient">
+	<section id="section-categories" class="section section--bg-gradient">
 		<div class="container">
-			<div class="wow fadeInUp pb-5 d-none d-md-block">
-				<img class="is-active" src="img/mockups/kollaborationsplattform.png" alt="Alle Fachmodelle in einem digitalen Zwilling verknüpft" data-hover-image="kollaborationsplattform">
-				<img src="img/mockups/issue-management.png" alt="Alle Mängel kategorisiert in der Datenhistorie" data-hover-image="issue">
-				<img src="img/mockups/bim-management.png" alt="Nach BIM-Ebenen und -Layer filtern" data-hover-image="bim">
-				<img src="img/mockups/kollaborationsplattform.png" alt="Alle Fachmodelle in einem digitalen Zwilling verknüpft" data-hover-image="ifc">
+			<div class="row align-items-center">
+				<div class="col">
+					<div class="wow fadeInUp d-none d-md-block">
+						<img class="is-active" src="img/mockups/kollaborationsplattform.png" alt="Alle Fachmodelle in einem digitalen Zwilling verknüpft" data-hover-image="kollaborationsplattform">
+						<img src="img/mockups/issue-management.png" alt="Alle Mängel kategorisiert in der Datenhistorie" data-hover-image="issue">
+						<img src="img/mockups/bim-management.png" alt="Nach BIM-Ebenen und -Layer filtern" data-hover-image="bim">
+						<img src="img/mockups/kollaborationsplattform.png" alt="Alle Fachmodelle in einem digitalen Zwilling verknüpft" data-hover-image="ifc">
+					</div>
+				</div>
+				<div class="col-lg-6 col-xl-5 mt-md-5 mt-lg-0">
+					<div class="row">
+						<div class="wow fadeInUp col-sm-6">
+							<div class="hover" data-hover="kollaborationsplattform">
+								<img src="img/icons/layers.svg" alt="">
+								<div class="h5">Kollaborationsplattform</div>
+								<p class="my-3">Live-Meetings am 3D-Modell und mit mehreren Teilnehmern gleichzeitig</p>
+								<a href="#" class="btn btn-outline-primary btn-sm">Mehr erfahren</a>
+							</div>
+						</div>
+						<div class="wow fadeInUp col-sm-6" data-wow-delay="0.2s">
+							<div class="hover" data-hover="issue">
+								<img src="img/icons/warning.svg" alt="">
+								<div class="h5">Issue Management</div>
+								<p class="my-3">Änderungsmanagement direkt an den jeweiligen Bauelementen, Zuweisung und Datierung von Fehlern</p>
+								<a href="#" class="btn btn-outline-primary btn-sm">Mehr erfahren</a>
+							</div>
+						</div>
+						<div class="wow fadeInUp col-sm-6" data-wow-delay="0.4s">
+							<div class="hover" data-hover="bim">
+								<img src="img/icons/docs.svg" alt="">
+								<div class="h5">BIM-Management</div>
+								<p class="my-3">Versionierung der IFC-Dateien, BIM-Datenmanagement an einem zentralen Ort</p>
+								<a href="#" class="btn btn-outline-primary btn-sm">Mehr erfahren</a>
+							</div>
+						</div>
+						<div class="wow fadeInUp col-sm-6" data-wow-delay="0.6s">
+							<div class="hover" data-hover="ifc">
+								<img src="img/icons/box.svg" alt="">
+								<div class="h5">IFC-Viewer</div>
+								<p class="my-3">Digitaler Zwilling – Darstellung eines interaktiven 3D-Modells mit integrierten BIM-Informationen nach dem IFC-Standard</p>
+								<a href="#" class="btn btn-outline-primary btn-sm">Mehr erfahren</a>
+							</div>
+						</div>
+					</div>
+				</div>
 			</div>
+			
 
-			<div class="row mt-md-5">
-				<div class="wow fadeInUp col-sm-6 col-lg-3">
-					<div class="hover" data-hover="kollaborationsplattform">
-						<img src="img/icons/layers.svg" alt="">
-						<div class="h4">Kollaborationsplattform</div>
-						<p class="my-4">Live-Meetings am 3D-Modell und mit mehreren Teilnehmern gleichzeitig</p>
-						<a href="#" class="btn btn-outline-primary">Mehr erfahren</a>
-					</div>
-				</div>
-				<div class="wow fadeInUp col-sm-6 col-lg-3" data-wow-delay="0.2s">
-					<div class="hover" data-hover="issue">
-						<img src="img/icons/warning.svg" alt="">
-						<div class="h4">Issue Management</div>
-						<p class="my-4">Änderungsmanagement direkt an den jeweiligen Bauelementen, Zuweisung und Datierung von Fehlern</p>
-						<a href="#" class="btn btn-outline-primary">Mehr erfahren</a>
-					</div>
-				</div>
-				<div class="wow fadeInUp col-sm-6 col-lg-3" data-wow-delay="0.4s">
-					<div class="hover" data-hover="bim">
-						<img src="img/icons/docs.svg" alt="">
-						<div class="h4">BIM-Management</div>
-						<p class="my-4">Versionierung der IFC-Dateien, BIM-Datenmanagement an einem zentralen Ort</p>
-						<a href="#" class="btn btn-outline-primary">Mehr erfahren</a>
-					</div>
-				</div>
-				<div class="wow fadeInUp col-sm-6 col-lg-3" data-wow-delay="0.6s">
-					<div class="hover" data-hover="ifc">
-						<img src="img/icons/box.svg" alt="">
-						<div class="h4">IFC-Viewer</div>
-						<p class="my-4">Digitaler Zwilling – Darstellung eines interaktiven 3D-Modells mit integrierten BIM-Informationen nach dem IFC-Standard</p>
-						<a href="#" class="btn btn-outline-primary">Mehr erfahren</a>
-					</div>
-				</div>
-			</div>
+			
 		</div>
 	</section>
 
-	<section class="section">
+	<section id="section-planning" class="section">
 		<div class="container">
 			<div class="row justify-content-center justify-content-lg-start">
 				<div class="col-lg-6">
@@ -219,7 +227,7 @@
 		</div>
 	</section>
 
-	<section class="section">
+	<section id="section-customers" class="section">
 		<div class="container">
 			<div class="wow fadeIn text-center">
 				<a href="#" class="customer__image"><img src="img/customers/cablex-ag.png" alt="Cablex AG Logo"></a>
@@ -233,7 +241,7 @@
 		</div>
 	</section>
 
-	<section class="section">
+	<section id="section-testemotionals" class="section">
 		<div class="container">
 			<div class="wow fadeInUp section__title text-center">Was Kunden über uns denken</div>
 			<div id="testemotionals-slider" class="wow fadeInUp testemotionals-slider">
@@ -262,7 +270,7 @@
 	</section>
 
 	<!-- feadback -->
-	<section class="feadback">
+	<section id="section-feadback" class="feadback">
 		<div class="container">
 			<div class="row align-items-center">
 				<div class="col-md-5 col-lg-4 d-none d-md-block">
@@ -285,7 +293,7 @@
 	</section>
 
 	<!-- footer -->
-	<footer class="footer">
+	<footer id="footer" class="footer">
 		<div class="container">
 			<div class="row justify-content-center justify-content-sm-between justify-content-lg-start align-items-end align-items-lg-start">
 				<div class="col-auto col-sm-6 col-lg-3 order-lg-1 text-center text-sm-left">
