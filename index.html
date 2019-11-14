@@ -3,7 +3,9 @@
 
 <head>
 	<meta charset="utf-8">
-	<title>Visoplan - Landingpage</title>
+	<title>Visoplan | BIM-Kollaborationsplattform für alle Bauvorhaben
+	</title>
+	<meta name="description" content="BIM-Projekte effizienter realisieren. Fachmodelle zusammenführen. Live-Meetings am 3D-Modell. Kommunikation und Datenaustausch zentral managen.">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -65,6 +67,20 @@
 		</div>
 	</div>
 
+	<!-- cookie -->
+	<div id="cookie" class="cookie">
+		<div class="container">
+			<div class="row align-items-center">
+				<div class="col">
+					<p>Visoplan verwendet Cookies, um den bestmöglichen Service zu gewährleisten. Wenn Sie auf der Seite weitersurfen, stimmen Sie der <a href="/privacy.html">Cookie-Nutzung</a> zu.</p>
+				</div>
+				<div class="col-auto">
+					<a href="#" id="cookie-accept" class="btn btn-primary btn-sm">Akzeptieren</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
 	<!-- header -->
 	<header id="header" class="wow fadeIn header">
 		<div class="container">
@@ -75,23 +91,51 @@
 				<div class="col-auto mr-auto">
 					<a href="/" class="header__logotype"><img src="img/visoplan-logo.svg" alt="Logo von Visoplan"></a>
 				</div>
-				<div class="col-auto d-none d-md-block">
+				<div class="col-auto d-none d-md-block position-static">
 					<nav class="header__nav">
 						<ul>
 							<li class="dropdown">
 								<span>Features</span>
-								<ul>
-									<li><a href="#"><img src="img/icons/layers.svg" alt=""> Kollaborationsplattform</a></li>
-									<li><a href="#"><img src="img/icons/warning.svg" alt=""> Issue Management</a></li>
-									<li><a href="#"><img src="img/icons/docs.svg" alt=""> BIM-Management</a></li>
-								</ul>
+								<div>
+									<div class="container">
+										<div class="row">
+											<div class="col-4">
+												<a href="#">
+													<img src="img/icons/cog.svg" alt="">
+													<div>
+														<span>Kollaborationsplattform</span>
+														<p>Versionierung der IFC-Dateien, BIM-Datenmanagement an einem zentralen Ort</p>
+													</div>
+												</a>
+											</div>
+											<div class="col-4">
+												<a href="#">
+													<img src="img/icons/warning.svg" alt="">
+													<div>
+														<span>Issue Management</span>
+														<p>Änderungsmanagement direkt an den jeweiligen Bauelementen, Zuweisung und Datierung von Fehlern</p>
+													</div>
+												</a>
+											</div>
+											<div class="col-4">
+												<a href="#">
+													<img src="img/icons/group.svg" alt="">
+													<div>
+														<span>BIM-Management</span>
+														<p>Live-Meetings am 3D-Modell und mit mehreren Teilnehmern gleichzeitig</p>
+													</div>
+												</a>
+											</div>
+										</div>
+									</div>
+								</div>
 							</li>
 							<li><a href="#">Pricing</a></li>
 							<li><a href="#">Anwendung</a></li>
 						</ul>
 					</nav>
 				</div>
-				<div class="col-auto col-lg-2 text-right ml-auto ml-md-0">
+				<div class="col-auto col-lg-3 text-right ml-auto ml-md-0">
 					<a href="#" class="header__btn">
 						<img src="img/icons/download.svg" alt="Download icon"> Demo
 					</a>
@@ -124,28 +168,28 @@
 	<section id="section-solutions" class="section">
 		<div class="container">
 			<div class="wow fadeInUp section__title text-center">Die eine BIM-Lösung für alle Baubeteiligten</div>
-			<div class="row justify-content-center justify-content-lg-start">
+			<div class="row justify-content-center justify-content-lg-start no-gutters">
 				<div class="wow fadeInUp col-10 col-sm-7 col-lg-6 text-center order-lg-2 mb-5 mb-lg-0">
 					<img src="img/graphics/bim-kollaboration.svg" class="w-100 d-none d-lg-block" alt="Alle Berufsgruppen arbeiten zentral zusammen">
 					<img src="img/graphics/bim-kollaboration-mobile.svg" class="w-100 d-lg-none" alt="Alle Berufsgruppen arbeiten zentral zusammen">
 				</div>
-				<div class="col-sm-6 col-lg-3 text-center text-lg-right order-lg-1">
-					<a href="#" class="wow fadeInLeft section__link mt-lg-4" data-wow-delay="0.3s">
-						<div class="h3">Architekten und Bauingenieure</div>
+				<div class="col-sm-6 col-lg-3 order-lg-1">
+					<a href="#" class="wow fadeInLeft section__link" data-wow-delay="0.3s">
+						<div class="h4">Architekten und Bauingenieure</div>
 						<p class="d-none d-md-block">Reibungslose Integration der IFC-Dateien aus Ihrer CAD-Anwendung</p>
 					</a>
-					<a href="#" class="wow fadeInLeft section__link mt-md-5 mt-lg-4 mt-xl-5 pt-xl-4" data-wow-delay="0.4s">
-						<div class="h3">Generalunternehmer und Bauunternehmer</div>
+					<a href="#" class="wow fadeInLeft section__link" data-wow-delay="0.4s">
+						<div class="h4">Generalunternehmer und Bauunternehmer</div>
 						<p class="d-none d-md-block">Optimaler Übergang von der Planungs- in die Bauphase, dank Dokumentation und Archivierung von Daten</p>
 					</a>
 				</div>
-				<div class="col-sm-6 col-lg-3 text-center text-lg-left order-lg-3">
-					<a href="#" class="wow fadeInRight section__link mt-lg-4" data-wow-delay="0.5s">
-						<div class="h3">Projektentwickler und Bauherren</div>
+				<div class="col-sm-6 col-lg-3 order-lg-3">
+					<a href="#" class="wow fadeInRight section__link" data-wow-delay="0.5s">
+						<div class="h4">Projektentwickler und Bauherren</div>
 						<p class="d-none d-md-block">Zentrales Controlling des Bauprojektes: Alle BIM-Daten übersichtlich bei Visoplan</p>
 					</a>
-					<a href="#" class="wow fadeInRight section__link mt-md-5" data-wow-delay="0.6s">
-						<div class="h3">BIM Manager und Projektsteuerer</div>
+					<a href="#" class="wow fadeInRight section__link" data-wow-delay="0.6s">
+						<div class="h4">BIM Manager und Projektsteuerer</div>
 						<p class="d-none d-md-block">BIM-Management aller Daten verschiedener CAD-Systeme – Datenintegration auf IFC-Basis</p>
 					</a>
 				</div>
@@ -168,34 +212,34 @@
 					<div class="row">
 						<div class="wow fadeInUp col-sm-6">
 							<div class="hover" data-hover="kollaborationsplattform">
-								<img src="img/icons/layers.svg" alt="">
+								<img src="img/icons/group-circle.svg" alt="">
 								<div class="h5">Kollaborationsplattform</div>
 								<p class="my-3">Live-Meetings am 3D-Modell und mit mehreren Teilnehmern gleichzeitig</p>
-								<a href="#" class="btn btn-outline-primary btn-sm">Mehr erfahren</a>
+								<a href="#">Mehr erfahren <img src="img/icons/arrow-right.svg" alt=""></a>
 							</div>
 						</div>
 						<div class="wow fadeInUp col-sm-6" data-wow-delay="0.2s">
 							<div class="hover" data-hover="issue">
-								<img src="img/icons/warning.svg" alt="">
+								<img src="img/icons/warning-circle.svg" alt="">
 								<div class="h5">Issue Management</div>
 								<p class="my-3">Änderungsmanagement direkt an den jeweiligen Bauelementen, Zuweisung und Datierung von Fehlern</p>
-								<a href="#" class="btn btn-outline-primary btn-sm">Mehr erfahren</a>
+								<a href="#">Mehr erfahren <img src="img/icons/arrow-right.svg" alt=""></a>
 							</div>
 						</div>
 						<div class="wow fadeInUp col-sm-6" data-wow-delay="0.4s">
 							<div class="hover" data-hover="bim">
-								<img src="img/icons/docs.svg" alt="">
+								<img src="img/icons/cog-circle.svg" alt="">
 								<div class="h5">BIM-Management</div>
 								<p class="my-3">Versionierung der IFC-Dateien, BIM-Datenmanagement an einem zentralen Ort</p>
-								<a href="#" class="btn btn-outline-primary btn-sm">Mehr erfahren</a>
+								<a href="#">Mehr erfahren <img src="img/icons/arrow-right.svg" alt=""></a>
 							</div>
 						</div>
 						<div class="wow fadeInUp col-sm-6" data-wow-delay="0.6s">
 							<div class="hover" data-hover="ifc">
-								<img src="img/icons/box.svg" alt="">
+								<img src="img/icons/box-circle.svg" alt="">
 								<div class="h5">IFC-Viewer</div>
 								<p class="my-3">Digitaler Zwilling – Darstellung eines interaktiven 3D-Modells mit integrierten BIM-Informationen nach dem IFC-Standard</p>
-								<a href="#" class="btn btn-outline-primary btn-sm">Mehr erfahren</a>
+								<a href="#">Mehr erfahren <img src="img/icons/arrow-right.svg" alt=""></a>
 							</div>
 						</div>
 					</div>
@@ -244,26 +288,27 @@
 	<section id="section-testemotionals" class="section">
 		<div class="container">
 			<div class="wow fadeInUp section__title text-center">Was Kunden über uns denken</div>
-			<div id="testemotionals-slider" class="wow fadeInUp testemotionals-slider">
-				<div class="testemotionals__item">
-					<div class="testemotionals__title">Kondor Wessels Bouw GmbH</div>
-					<p>„Visoplan bietet uns eine Plattform, um eine Vielzahl der Prozesse unseres Workflows zu vereinen. Ein zentrales Daten- und Modellmanagement, das eine kollaborative Arbeitsweise perfekt ergänzt.“</p>
-					<div class="testemotionals__author">Mike Daugardt (Projektkoordinator BIM)</div>
+			<div class="row">
+				<div class="wow fadeInUp col-lg-4 pt-lg-5">
+					<div class="testemotionals__item">
+						<div class="testemotionals__title">Kondor Wessels Bouw GmbH</div>
+						<p>„Visoplan bietet uns eine Plattform, um eine Vielzahl der Prozesse unseres Workflows zu vereinen. Ein zentrales Daten- und Modellmanagement, das eine kollaborative Arbeitsweise perfekt ergänzt.“</p>
+						<div class="testemotionals__author">Mike Daugardt (Projektkoordinator BIM)</div>
+					</div>
 				</div>
-				<div class="testemotionals__item">
-					<div class="testemotionals__title">Cablex AG</div>
-					<p>„Visoplan bietet uns eine Plattform, um eine Vielzahl der Prozesse unseres Workflows zu vereinen. Ein zentrales Daten- und Modellmanagement, das eine kollaborative Arbeitsweise perfekt ergänzt.“</p>
-					<div class="testemotionals__author">Mike Daugardt (Projektkoordinator BIM)</div>
+				<div class="wow fadeInUp col-lg-4" data-wow-delay="0.1s">
+					<div class="testemotionals__item">
+						<div class="testemotionals__title">Cablex AG</div>
+						<p>„Visoplan bietet uns eine Plattform, um eine Vielzahl der Prozesse unseres Workflows zu vereinen. Ein zentrales Daten- und Modellmanagement, das eine kollaborative Arbeitsweise perfekt ergänzt.“</p>
+						<div class="testemotionals__author">Mike Daugardt (Projektkoordinator BIM)</div>
+					</div>
 				</div>
-				<div class="testemotionals__item">
-					<div class="testemotionals__title">Bollinger + Fehlig Architekten GmbH</div>
-					<p>„Visoplan bietet uns eine Plattform, um eine Vielzahl der Prozesse unseres Workflows zu vereinen. Ein zentrales Daten- und Modellmanagement, das eine kollaborative Arbeitsweise perfekt ergänzt.“</p>
-					<div class="testemotionals__author">Mike Daugardt (Projektkoordinator BIM)</div>
-				</div>
-				<div class="testemotionals__item">
-					<div class="testemotionals__title">Kondor Wessels Bouw GmbH</div>
-					<p>„Visoplan bietet uns eine Plattform, um eine Vielzahl der Prozesse unseres Workflows zu vereinen. Ein zentrales Daten- und Modellmanagement, das eine kollaborative Arbeitsweise perfekt ergänzt.“</p>
-					<div class="testemotionals__author">Mike Daugardt (Projektkoordinator BIM)</div>
+				<div class="wow fadeInUp col-lg-4 pt-lg-5" data-wow-delay="0.2s">
+					<div class="testemotionals__item">
+						<div class="testemotionals__title">Bollinger + Fehlig Architekten GmbH</div>
+						<p>„Visoplan bietet uns eine Plattform, um eine Vielzahl der Prozesse unseres Workflows zu vereinen. Ein zentrales Daten- und Modellmanagement, das eine kollaborative Arbeitsweise perfekt ergänzt.“</p>
+						<div class="testemotionals__author">Mike Daugardt (Projektkoordinator BIM)</div>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -297,7 +342,7 @@
 		<div class="container">
 			<div class="row justify-content-center justify-content-sm-between justify-content-lg-start align-items-end align-items-lg-start">
 				<div class="col-auto col-sm-6 col-lg-3 order-lg-1 text-center text-sm-left">
-					<a href="/"><img src="img/visoplan-logo.svg" alt="Logo von Visoplan"></a>
+					<a href="/" class="footer__logotype"><img src="img/visoplan-logo.svg" alt="Logo von Visoplan"></a>
 					<p class="mt-5 d-none d-lg-block">Über Visoplan und BIM-Methode auf dem Laufenden bleiben</p>
 					<form class="input-group mt-4 mt-lg-5">
 						<input type="text" placeholder="Newsletter">
@@ -356,26 +401,6 @@
 	<!-- scripts -->
 	<script src="js/dist/scripts.min.js"></script>
 	<script src="js/dist/common.min.js"></script>
-	<script>
-		$('#testemotionals-slider').slick({
-			dots: true,
-			arrows: false,
-			slidesToShow: 3,
-			autoplay: true,
-			responsive: [{
-				breakpoint: 992,
-				settings: {
-					slidesToShow: 2
-				}
-			}, {
-				breakpoint: 768,
-				settings: {
-					slidesToShow: 1,
-					adaptiveHeight: true
-				}
-			}]
-		});
-	</script>
 </body>
 
 </html>
