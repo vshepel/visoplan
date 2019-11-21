@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<title>Bauplanungssoftware für alle Projektbeteiligten | Visoplan</title>
+	<meta name="description" content="Visoplan ist die BIM-Kollaborationsplattform im Bauprojekt und dient als zentrale Schnittstelle zwischen den CAD-Anwendungen. Alle Daten an einem Ort.">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- favicon -->
+	<link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
+	<link rel="manifest" href="img/favicon/site.webmanifest">
+	<link rel="mask-icon" href="img/favicon/safari-pinned-tab.svg" color="#18a5c9">
+	<meta name="apple-mobile-web-app-title" content="Visoplan">
+	<meta name="application-name" content="Visoplan">
+	<meta name="msapplication-TileColor" content="#ffffff">
+	<meta name="theme-color" content="#ffffff">
+
+	<!-- style -->
+	<link rel="stylesheet" href="css/main.min.css">
+</head>
+
+<body>
+	<!-- overlay -->
+	<div id="overlay" class="overlay"></div>
+
+	<!-- mobile menu -->
+	<div id="menu" class="menu">
+		<a href="/"><img src="img/visoplan-logo.svg" alt="Logo von Visoplan"></a>
+		<div class="menu__divider"></div>
+		<nav>
+			<ul>
+				<li><a href="#">Start</a></li>
+				<li><a href="#">Features</a></li>
+				<li><a href="#">Issue Management</a></li>
+				<li><a href="#">BIM-Management</a></li>
+				<li><a href="#">BIM-Kollaborationsplattform</a></li>
+				<li><a href="#">Pricing</a></li>
+			</ul>
+		</nav>
+		<div class="menu__divider"></div>
+		<nav>
+			<ul>
+				<li><a href="#">Live-Demo</a></li>
+				<li><a href="#">Über Uns</a></li>
+				<li><a href="#">Karriere</a></li>
+			</ul>
+		</nav>
+		<div class="menu__divider"></div>
+		<nav class="mb-auto">
+			<ul>
+				<li><a href="#">Visoplan-Blog</a></li>
+				<li><a href="#">FAQ</a></li>
+				<li><a href="#">Support</a></li>
+			</ul>
+		</nav>
+		<div class="menu__socials">
+			<a href="#"><img src="img/icons/linkedin-icon.png" alt="Icon mit Verlinkung zu LinkedIn"></a>
+			<a href="#"><img src="img/icons/xing-icon.png" alt="Icon mit Verlinkung zu Xing"></a>
+			<a href="#"><img src="img/icons/youtube-icon.png" alt="Icon mit Verlinkung zu YouTube"></a>
+			<a href="#"><img src="img/icons/instagram-icon.png" alt="Icon mit Verlinkung zu Instagram"></a>
+			<a href="#"><img src="img/icons/facebook-icon.png" alt="Icon mit Verlinkung zu Facebook"></a>
+		</div>
+	</div>
+
+	<!-- cookie -->
+	<div id="cookie" class="cookie">
+		<div class="container">
+			<div class="row align-items-center">
+				<div class="col">
+					<p>Visoplan verwendet Cookies, um den bestmöglichen Service zu gewährleisten. Wenn Sie auf der Seite weitersurfen, stimmen Sie der <a href="/privacy.html">Cookie-Nutzung</a> zu.</p>
+				</div>
+				<div class="col-auto">
+					<a href="#" id="cookie-accept" class="btn btn-primary btn-sm">Akzeptieren</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- header -->
+	<header id="header" class="wow fadeIn header">
+		<div class="container">
+			<div class="row align-items-center">
+				<div class="col-auto d-md-none">
+					<button type="button" id="header__call" class="header__call"><img src="img/icons/menu.svg" alt=""></button>
+				</div>
+				<div class="col-auto mr-auto">
+					<a href="/" class="header__logotype"><img src="img/visoplan-logo.svg" alt="Logo von Visoplan"></a>
+				</div>
+				<div class="col-auto d-none d-md-block position-static">
+					<nav class="header__nav">
+						<ul>
+							<li class="dropdown">
+								<a href="#">Features</a>
+								<div>
+									<div class="container">
+										<div class="row">
+											<div class="col-4">
+												<a href="#">
+													<img src="img/icons/cog.svg" alt="">
+													<div>
+														<span>Kollaborationsplattform</span>
+														<p>Versionierung der IFC-Dateien, BIM-Datenmanagement an einem zentralen Ort</p>
+													</div>
+												</a>
+											</div>
+											<div class="col-4">
+												<a href="#">
+													<img src="img/icons/warning.svg" alt="">
+													<div>
+														<span>Issue Management</span>
+														<p>Änderungsmanagement direkt an den jeweiligen Bauelementen, Zuweisung und Datierung von Fehlern</p>
+													</div>
+												</a>
+											</div>
+											<div class="col-4">
+												<a href="#">
+													<img src="img/icons/group.svg" alt="">
+													<div>
+														<span>BIM-Management</span>
+														<p>Live-Meetings am 3D-Modell und mit mehreren Teilnehmern gleichzeitig</p>
+													</div>
+												</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</li>
+							<li><a href="#">Pricing</a></li>
+							<li><a href="#">Anwendung</a></li>
+						</ul>
+					</nav>
+				</div>
+				<div class="col-auto col-lg-3 text-right ml-auto ml-md-0">
+					<a href="#" class="header__btn">
+						<img src="img/icons/download.svg" alt="Download icon"> Demo
+					</a>
+				</div>
+			</div>
+		</div>
+	</header>
+
+	<!-- welcome -->
+	<section id="section-welcome" class="welcome welcome--bg-gradient">
+		<div class="container">
+			<div class="row align-items-center justify-content-center justify-content-lg-start">
+				<div class="col-sm-10 col-md-8 col-lg">
+					<h1 class="wow fadeInUp welcome__title">Alle Stakeholder kollaborieren über eine BIM-Software</h1>
+					<p class="wow fadeInUp mt-4 mt-md-5">Visoplan ist die zentrale Schnittstelle zwischen allen CAD-Tools. Mit geringem Aufwand lassen sich die verschiedenen IFC-Dateien exportieren und im IFC-Viewer automatisch zu einem BIM-Fachmodell zusammenführen. Darüber hinaus finden die gesamte Kommunikation und der Datenaustausch über unsere Plattform statt.</p>
+				</div>
+				<div class="col-10 col-lg-auto mt-4 mt-lg-0 offset-lg-2">
+					<img src="img/graphics/usecase/bim-kollaboration.svg" alt="alle Beteiligten des Bauprojekts kollaborieren in einer BIM-Software">
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="section mt-sm-5">
+		<div class="container">
+			<div class="row justify-content-center">
+				<div class="col-10 col-sm-6 col-md-4 col-lg-3">
+					<div data-tab="tab-1" class="wow fadeInUp hover hover--style-shadow is-active">
+						<div class="h5">Architekten und Bauingenieure</div>
+						<img class="mt-4" src="img/graphics/usecase/architekten-und-bauningenieure.svg" style="height: 100px;" alt="illustrierte Architektin bei der Arbeit">
+					</div>
+				</div>
+				<div class="col-10 col-sm-6 col-md-4 col-lg-3">
+					<div data-tab="tab-2" class="wow fadeInUp hover hover--style-shadow" data-wow-delay="0.1s">
+						<div class="h5">Projektentwickler und Bauherren</div>
+						<img class="mt-4" src="img/graphics/usecase/projektentwickler-und-bauherren.svg" style="height: 100px;" alt="illustrierter Bauherr bei der Arbeit">
+					</div>
+				</div>
+				<div class="col-10 col-sm-6 col-md-4 col-lg-3">
+					<div data-tab="tab-3" class="wow fadeInUp hover hover--style-shadow" data-wow-delay="0.2s">
+						<div class="h5">Generalunternehmer und Bauunternehmer</div>
+						<img class="mt-4" src="img/graphics/usecase/generalunternehmer-und-bauunternehmer.svg" style="height: 100px;" alt="illustrierter Bauunternehmer bei der Arbeit">
+					</div>
+				</div>
+				<div class="col-10 col-sm-6 col-md-4 col-lg-3">
+					<div data-tab="tab-4" class="wow fadeInUp hover hover--style-shadow" data-wow-delay="0.3s">
+						<div class="h5">BIM-Manager und Projektsteuerer</div>
+						<img class="mt-4" src="img/graphics/usecase/bim-manager-und-projektsteuerer.svg" style="height: 100px;" alt="illustrierter BIM-Manager bei der Arbeit">
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<div data-tab-content="tab-1" class="is-active">
+		<div class="section">
+			<div class="container">
+				<div class="wow fadeInUp section__title text-center mb-0">Architekten und Bauingenieure</div>
+				<div class="row align-items-center">
+					<div class="col-md">
+						<div class="wow fadeInUp section__title pt-md-5 my-5">Reibungslose IFC-Integration aus Ihrer CAD-Anwendung</div>
+						<p class="wow fadeInUp">Exportieren Sie das 3D-Modell als IFC-Datei und integrieren es in Visoplan per Drag & Drop. Die Datei wird automatisch mit den BIM-Fachmodellen der anderen Gewerke zu einem digitalen Zwilling zusammengeführt.</p>
+					</div>
+					<div class="col-md offset-md-1">
+						<ul class="wow fadeInUp list list--style-checked mt-5">
+							<li>Automatische Zusammenführung verschiedener Fachmodelle zu einem digitalen Zwilling</li>
+							<li>Live-Meeting direkt im IFC-Viewer mit mehreren Teilnehmern gleichzeitig</li>
+							<li>Schnelles Erkennen von Fehlern zwischen den einzelnen BIM-Fachmodellen</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<section class="section section--bg-light">
+			<div class="container">
+				<div class="row justify-content-center" data-click-parent>
+					<div class="col-lg-8" class="wow fadeInUp w-100">
+						<img data-click-image="click-1-1" class="is-active" src="img/mockups/use-case/architekten-bauingenieure-bim-workflow.png" alt="BIM-Workflow für Architekten und Bauingenieure">
+						<img data-click-image="click-1-2" src="img/mockups/use-case/1.png" alt="">
+						<img data-click-image="click-1-3" src="img/mockups/use-case/2.png" alt="">
+					</div>
+					<div class="col mt-4 mt-sm-5 mt-lg-0 pl-lg-4">
+						<div class="wow fadeInUp font-weight-bold text-primary mb-4">Workflow</div>
+						<ul class="list list--style-tabs">
+							<li data-click="click-1-1" class="is-active">
+								<div>
+									<span>Merging von <br class="d-none d-lg-block">IFC-Fachmodellen</span>
+									<div>
+										<p>Automatische Zusammenführung der IFC-Fachmodelle</p>
+										<p>Digitaler Zwilling enthält alle Bauinformationen</p>
+										<a href="#">Mehr erfahren <img src="img/icons/arrow-right.svg" alt=""></a>
+									</div>
+								</div>
+							</li>
+							<li data-click="click-1-2">
+								<div>
+									<span>Zentrale Dokumentation <br class="d-none d-lg-block">und Zusammenführung <br class="d-none d-lg-block">von BCF-Daten</span>
+									<div>
+										<p>BCF-Daten sowohl importieren als auch exportieren</p>
+										<p>Kommunikation über verschiedene CAD-Tools hinweg</p>
+										<a href="#">Mehr erfahren <img src="img/icons/arrow-right.svg" alt=""></a>
+									</div>
+								</div>
+							</li>
+							<li data-click="click-1-3">
+								<div>
+									<span>Intelligente BIM-Filter <br class="d-none d-lg-block">und -Suche</span>
+									<div>
+										<p>Nach Issues und BIM-Modellstatus filtern</p>
+										<p>Den Überblick bei großen BIM-Projekten bewahren</p>
+										<a href="#">Mehr erfahren <img src="img/icons/arrow-right.svg" alt=""></a>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<div class="section">
+			<div class="container">
+				<div class="row align-items-center">
+					<div class="col-lg">
+						<div class="wow fadeInUp section__title text-center text-lg-left mb-5">Live-Meetings am 3D-Fachmodell, jederzeit und überall</div>
+						<ul class="wow fadeInUp list list--style-checked mt-5">
+							<li>Gemeinsam Live-Meetings im IFC-Viewer abhalten, keine Besichtigung der Baustelle notwendig</li>
+							<li>Effizienter kollaborieren und schnelles Feedback einholen, dank sofortiger Einsicht der BIM-Bauinformationen</li>
+						</ul>
+					</div>
+					<div class="col-auto offset-1 d-none d-lg-block">
+						<img class="wow fadeIn" src="img/graphics/usecase/meeting-3d-modell-ifc-viewer.png" alt="Kollaboration im IFC-Viewer">
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div data-tab-content="tab-2">
+		<div class="section">
+			<div class="container">
+				<div class=" section__title text-center mb-0">Projektentwickler und Bauherren</div>
+				<div class="row align-items-center">
+					<div class="col-md">
+						<div class=" section__title pt-md-5 my-5">Zentrales Controlling des BIM - Bauprojektes</div>
+						<p class="">Managen Sie ihre Bauprojekte zentral mit Visoplan. Dank der vielfältigen Funktionen zur Kollaboration sowie der BIM-Datenhistorie, behalten Sie stets den Überblick in allen Phasen der Bauplanung.</p>
+					</div>
+					<div class="col-md offset-md-1">
+						<ul class=" list list--style-checked mt-5">
+							<li>Kommunikation und Datenaustausch zentral steuern</li>
+							<li>Übersichtliche und einsteigerfreundliche Benutzeroberfläche</li>
+							<li>Live-Meeting direkt im IFC-Viewer und mit mehreren Teilnehmern gleichzeitig</li>
+							<li>Automatische Versionierung und Kategorisierung der BIM-Daten</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<section class="section section--bg-light">
+			<div class="container">
+				<div class="row justify-content-center" data-click-parent>
+					<div class="col-lg-8" class=" w-100">
+						<img data-click-image="click-2-1" class="is-active" src="img/mockups/use-case/projektentwickler-bauherren-bim-workflow.png" alt="BIM-Workflow für Projektentwickler und Bauherren">
+						<img data-click-image="click-2-2" src="img/mockups/use-case/3.png" alt="">
+						<img data-click-image="click-2-3" src="img/mockups/use-case/4.png" alt="">
+					</div>
+					<div class="col mt-4 mt-sm-5 mt-lg-0 pl-lg-4">
+						<div class=" font-weight-bold text-primary mb-4">Workflow</div>
+						<ul class="list list--style-tabs">
+							<li data-click="click-2-1" class="is-active">
+								<div>
+									<span>Controlling des BIM- <br class="d-none d-lg-block">Bauprojektes</span>
+									<div>
+										<p>IFC-Dateien zu einem digitalen Zwilling verknüpfen Nach BIM-Ebenen (Etage) und -Layer (TGA, etc.) filtern</p>
+										<p>BIM-Daten werden versioniert, kategorisiert und archiviert</p>
+										<p>Aktivitäten und Veränderungen im Zeitverlauf</p>
+										<a href="#">Mehr erfahren <img src="img/icons/arrow-right.svg" alt=""></a>
+									</div>
+								</div>
+							</li>
+							<li data-click="click-2-2">
+								<div>
+									<span>Kollaboration auf einem <br class="d-none d-lg-block">neuen BIM-Level</span>
+									<div>
+										<p>3D-Live-Meeting im IFC-Viewer</p>
+										<p>Gemeinsam über aktuelle Probleme debattieren</p>
+										<p>Unterstützung von IFC, BFC, PDF und weiteren Formaten</p>
+										<a href="#">Mehr erfahren <img src="img/icons/arrow-right.svg" alt=""></a>
+									</div>
+								</div>
+							</li>
+							<li data-click="click-2-3">
+								<div>
+									<span>Sicherung der <br class="d-none d-lg-block">Projekteffizienz und - <br class="d-none d-lg-block">qualität</span>
+									<div>
+										<p>Automatische Benachrichtigungen, schnellere Entscheidungen</p>
+										<p>Steuerung und Kommunikation zentral über eine BIM-Plattform</p>
+										<p>BIM-Kollisionserkennung</p>
+										<p>Issue Management direkt am 3D-Modell im IFC-Viewer</p>
+										<p>BIM-Datenhistorie für vollständiges Tracking</p>
+										<a href="#">Mehr erfahren <img src="img/icons/arrow-right.svg" alt=""></a>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<div class="section">
+			<div class="container">
+				<div class="row align-items-center">
+					<div class="col-lg">
+						<div class=" section__title text-center text-lg-left mb-5">Teilnahme an BIM - Bauplanungsbesprechungen, jederzeit und überall</div>
+						<ul class="list list--style-checked mt-5">
+							<li>Die Distanz zwischen den Projektbeteiligten spielt keine Rolle, da sich die Teilnehmer stets zu einem virtuellen Live-Meeting am 3D-Modell verabreden können</li>
+							<li>Die BIM-Fachmodelle lassen sich intuitiv abgleichen, sodass Probleme zwischen den einzelnen 3D-Modellen schnell erkannt und evaluiert werden können</li>
+						</ul>
+					</div>
+					<div class="col-auto offset-1 d-none d-lg-block">
+						<img class="" src="img/graphics/usecase/meeting-3d-modell-ifc-viewer.png" alt="Kollaboration im IFC-Viewer">
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div data-tab-content="tab-3">
+		<div class="section">
+			<div class="container">
+				<div class=" section__title text-center mb-0">Generalunternehmer und Bauunternehmer</div>
+				<div class="row align-items-center">
+					<div class="col-md">
+						<div class=" section__title pt-md-5 my-5">Optimaler Übergang von der Planungs- in die Bauphase</div>
+						<p class="">Unsere Software archiviert und kategorisiert alle Daten, die in der Bauplanungsphase bei Visoplan hochgeladen werden. Dadurch können in der Bauphase sämtliche Informationen zum BIM-Projekt abgerufen werden.Missverständnisse durch Probleme beim Informationsaustausch oder fehlende Daten werden somit vermieden und die Kommunikation zwischen der Planungs- und Bauphase kann effizienter erfolgen.</p>
+					</div>
+					<div class="col-md offset-md-1">
+						<ul class=" list list--style-checked mt-5">
+							<li>Schnelles Erkennen von Planungsfehlern und effizienter Modellabgleich</li>
+							<li>Nachverfolgbarkeit der BIM-Bauplanungsphase</li>
+							<li>Teilnahme an sämtlichen BIM-Bauplanungsbesprechungen</li>
+							<li>Änderungen und Probleme können direkt am 3D-Modell betrachtet und evaluiert werden</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<section class="section section--bg-light">
+			<div class="container">
+				<div class="row justify-content-center" data-click-parent>
+					<div class="col-lg-8" class=" w-100">
+						<img data-click-image="click-3-1" class="is-active" src="img/mockups/use-case/generalunternehmer-bauunternehmer-bim-workflow.png" alt="BIM-Workflow für Generalunternehmer und Bauunternehmer">
+						<img data-click-image="click-3-2" src="img/mockups/use-case/3.png" alt="">
+						<img data-click-image="click-3-3" src="img/mockups/use-case/4.png" alt="">
+					</div>
+					<div class="col mt-4 mt-sm-5 mt-lg-0 pl-lg-4">
+						<div class=" font-weight-bold text-primary mb-4">Workflow</div>
+						<ul class="list list--style-tabs">
+							<li data-click="click-3-1" class="is-active">
+								<div>
+									<span>Alle Bauinformationen <br class="d-none d-lg-block">auf einen Blick</span>
+									<div>
+										<p>Die BIM-Daten werden kategorisiert</p>
+										<p>Zusätzlich können die Daten auch gefiltert werden</p>
+										<a href="#">Mehr erfahren <img src="img/icons/arrow-right.svg" alt=""></a>
+									</div>
+								</div>
+							</li>
+							<li data-click="click-3-2">
+								<div>
+									<span>Kollaboration auf einem <br class="d-none d-lg-block">neuen BIM-Level</span>
+									<div>
+										<p>3D-Live-Meeting im IFC-Viewer</p>
+										<p>Reibungsloser Übergang von der Planungs- in die Bauphase</p>
+										<a href="#">Mehr erfahren <img src="img/icons/arrow-right.svg" alt=""></a>
+									</div>
+								</div>
+							</li>
+							<li data-click="click-3-3">
+								<div>
+									<span>Sicherung der Projekteffizienz und -qualität</span>
+									<div>
+										<p>BIM-Kollisionserkennung und Kollisionsimport</p>
+										<p>Issue Management direkt am 3D-Modell im IFC-Viewer</p>
+										<a href="#">Mehr erfahren <img src="img/icons/arrow-right.svg" alt=""></a>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<div class="section">
+			<div class="container">
+				<div class="row align-items-center">
+					<div class="col-lg">
+						<div class=" section__title text-center text-lg-left mb-5">Live-Meetings am 3D-Fachmodell, jederzeit und überall</div>
+						<ul class=" list list--style-checked mt-5">
+							<li>Gemeinsam Live-Meetings im IFC-Viewer abhalten, keine Besichtigung der Baustelle notwendig</li>
+							<li>Effizienter kollaborieren und schnelles Feedback einholen, dank sofortiger Einsicht der BIM-Bauinformationen</li>
+						</ul>
+					</div>
+					<div class="col-auto offset-1 d-none d-lg-block">
+						<img class="" src="img/graphics/usecase/meeting-3d-modell-ifc-viewer.png" alt="Kollaboration im IFC-Viewer">
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div data-tab-content="tab-4">
+		<div class="section">
+			<div class="container">
+				<div class=" section__title text-center mb-0">BIM-Manager und Projektsteuerer</div>
+				<div class="row align-items-center">
+					<div class="col-md">
+						<div class=" section__title pt-md-5 my-5">Zentrales Controlling aller Daten verschiedener CAD-Systeme </div>
+						<p class="">Erleichtern Sie sich den Arbeitsalltag, indem Sie Bauprojekte strukturiert und zentral steuern. Fügen Sie in wenigen Schritten die IFC-Files unterschiedlicher CAD-Tools zu einem Fachmodell zusammen, welches sämtliche Bauinformationen enthält. Lenken und verwalten Sie die gesamte Kommunikation zwischen allen Baubeteiligten über Visoplan.</p>
+					</div>
+					<div class="col-md offset-md-1">
+						<ul class=" list list--style-checked mt-5">
+							<li>Kommunikation und Datenaustausch zentral managen</li>
+							<li>BIM-Datenhistorie – alle Daten sind archiviert und kategorisiert</li>
+							<li>Übersichtliche und einsteigerfreundliche BIM-Benutzeroberfläche</li>
+							<li>Live-Meeting direkt im IFC-Viewer und mit mehreren Teilnehmern gleichzeitig</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<section class="section section--bg-light">
+			<div class="container">
+				<div class="row justify-content-center" data-click-parent>
+					<div class="col-lg-8" class=" w-100">
+						<img data-click-image="click-4-1" class="is-active" src="img/mockups/use-case/bim-manager-projektsteuerer-bim-workflow.png" alt="BIM-Workflow für BIM-Manager und Projektsteuerer">
+						<img data-click-image="click-4-2" src="img/mockups/use-case/5.png" alt="">
+						<img data-click-image="click-4-3" src="img/mockups/use-case/4.png" alt="">
+					</div>
+					<div class="col mt-4 mt-sm-5 mt-lg-0 pl-lg-4">
+						<div class=" font-weight-bold text-primary mb-4">Workflow</div>
+						<ul class="list list--style-tabs">
+							<li data-click="click-4-1" class="is-active">
+								<div>
+									<span>Controlling des BIM - <br class="d-none d-lg-block">Bauprojektes</span>
+									<div>
+										<p>IFC-Dateien zu einem digitalen Zwilling verknüpfen</p>
+										<p>Nach BIM-Ebenen (Etage) und -Layer (TGA, etc.) filtern</p>
+										<a href="#">Mehr erfahren <img src="img/icons/arrow-right.svg" alt=""></a>
+									</div>
+								</div>
+							</li>
+							<li data-click="click-4-2">
+								<div>
+									<span>Zentrale Dokumentation <br class="d-none d-lg-block">und Zusammenführung <br class="d-none d-lg-block">von BCF-Daten</span>
+									<div>
+										<p>Gezielt nach Daten suchen und filtern</p>
+										<p>BIM-Daten werden versioniert, kategorisiert und archiviert</p>
+										<a href="#">Mehr erfahren <img src="img/icons/arrow-right.svg" alt=""></a>
+									</div>
+								</div>
+							</li>
+							<li data-click="click-4-3">
+								<div>
+									<span>Kollaboration auf einem <br class="d-none d-lg-block">neuen BIM-Level</span>
+									<div>
+										<p>3D-Live-Meeting im IFC-Viewer</p>
+										<p>Gemeinsam über aktuelle Probleme debattieren</p>
+										<p>Unterstützung von IFC, BFC, PDF und weiteren Formaten</p>
+										<a href="#">Mehr erfahren <img src="img/icons/arrow-right.svg" alt=""></a>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<div class="section">
+			<div class="container">
+				<div class="row align-items-center">
+					<div class="col-lg">
+						<div class=" section__title text-center text-lg-left mb-5">Teilnahme an BIM - Bauplanungsbesprechungen, jederzeit und überall</div>
+						<ul class=" list list--style-checked mt-5">
+							<li>Die Distanz zwischen den Projektbeteiligten spielt keine Rolle, da sich die Teilnehmer stets zu einem virtuellen Live-Meeting am 3D-Modell verabreden können</li>
+							<li>Die BIM-Fachmodelle lassen sich intuitiv abgleichen, sodass Probleme zwischen den einzelnen 3D-Modellen schnell erkannt und evaluiert werden können</li>
+						</ul>
+					</div>
+					<div class="col-auto offset-1 d-none d-lg-block">
+						<img class="" src="img/graphics/usecase/meeting-3d-modell-ifc-viewer.png" alt="Kollaboration im IFC-Viewer">
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<section class="section">
+		<div class="container">
+			<div class="section__title mb-5">Frequently Asked Questions</div>
+
+			<div style="max-height: 400px;padding-right: 30px;" data-simplebar data-simplebar-auto-hide="false">
+
+				<!-- accordion -->
+				<ul class="accordion">
+					<li>
+						<a class="toggle" href="javascript:void(0);">Welchen Mehrwert bietet mir Visoplan gegenüber anderen CAD-Tools?</a>
+						<div class="inner">
+							Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequuntur, illo? Reprehenderit nulla ad pariatur incidunt, beatae facilis voluptatem non sunt.
+						</div>
+					</li>
+					<li>
+						<a class="toggle" href="javascript:void(0);">Welchen Mehrwert bietet mir Visoplan gegenüber anderen CAD-Tools?</a>
+						<div class="inner">
+							Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequuntur, illo? Reprehenderit nulla ad pariatur incidunt, beatae facilis voluptatem non sunt.
+						</div>
+					</li>
+					<li>
+						<a class="toggle" href="javascript:void(0);">Welchen Mehrwert bietet mir Visoplan gegenüber anderen CAD-Tools?</a>
+						<div class="inner">
+							Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequuntur, illo? Reprehenderit nulla ad pariatur incidunt, beatae facilis voluptatem non sunt.
+						</div>
+					</li>
+					<li>
+						<a class="toggle" href="javascript:void(0);">Welchen Mehrwert bietet mir Visoplan gegenüber anderen CAD-Tools?</a>
+						<div class="inner">
+							Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequuntur, illo? Reprehenderit nulla ad pariatur incidunt, beatae facilis voluptatem non sunt.
+						</div>
+					</li>
+					<li>
+						<a class="toggle" href="javascript:void(0);">Welchen Mehrwert bietet mir Visoplan gegenüber anderen CAD-Tools?</a>
+						<div class="inner">
+							Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequuntur, illo? Reprehenderit nulla ad pariatur incidunt, beatae facilis voluptatem non sunt.
+						</div>
+					</li>
+					<li>
+						<a class="toggle" href="javascript:void(0);">Welchen Mehrwert bietet mir Visoplan gegenüber anderen CAD-Tools?</a>
+						<div class="inner">
+							Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequuntur, illo? Reprehenderit nulla ad pariatur incidunt, beatae facilis voluptatem non sunt.
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</section>
+
+	<!-- feadback -->
+	<section id="section-feadback" class="feadback">
+		<div class="container">
+			<div class="row align-items-center">
+				<div class="col-md-5 col-lg-4 d-none d-md-block">
+					<div class="h1">Schon heute in der Zukunft mit Visoplan</div>
+				</div>
+				<div class="col-md-6 col-lg-5 ml-auto">
+					<img class="feadback__icon" src="img/icons/message.svg" alt="">
+					<div class="h3 my-4">Lassen Sie sich von uns beraten</div>
+					<form class="feadback__form">
+						<input type="text" placeholder="E-Mail hier eingeben">
+						<input type="text" placeholder="Name">
+						<div class="input-group">
+							<textarea rows="7" placeholder="Nachricht"></textarea>
+							<button class="btn btn-primary btn-sm">Jetzt teilnehmen</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- footer -->
+	<footer id="footer" class="footer">
+		<div class="container position-relative">
+			<div class="footer__lang">
+				<div class="mb-2">Choose your language</div>
+				<select id="choose-lang">
+					<option value="0" data-imagesrc="img/icons/germany.svg">Deutsch</option>
+					<option value="1" data-imagesrc="img/icons/united-kingdom.svg">English</option>
+				</select>
+			</div>
+			<div class="row justify-content-center justify-content-sm-between justify-content-lg-start align-items-end align-items-lg-start">
+				<div class="col-auto col-sm-6 col-lg-3 order-lg-1 text-center text-sm-left">
+					<a href="/" class="footer__logotype"><img src="img/visoplan-logo.svg" alt="Logo von Visoplan"></a>
+					<p class="mt-5 d-none d-lg-block">Über Visoplan und BIM-Methode auf dem Laufenden bleiben</p>
+					<form class="input-group mt-4 mt-lg-5">
+						<input type="text" placeholder="Newsletter">
+						<button class="btn btn-secondary btn-sm">Anmelden</button>
+					</form>
+				</div>
+				<div class="col-auto order-lg-3 mt-4 mt-sm-0">
+					<div class="footer__socials">
+						<a href="#"><img src="img/icons/linkedin-icon.png" alt="Icon mit Verlinkung zu LinkedIn"></a>
+						<a href="#"><img src="img/icons/xing-icon.png" alt="Icon mit Verlinkung zu Xing"></a>
+						<a href="#"><img src="img/icons/youtube-icon.png" alt="Icon mit Verlinkung zu YouTube"></a>
+						<a href="#"><img src="img/icons/instagram-icon.png" alt="Icon mit Verlinkung zu Instagram"></a>
+						<a href="#"><img src="img/icons/facebook-icon.png" alt="Icon mit Verlinkung zu Facebook"></a>
+					</div>
+				</div>
+				<div class="col-auto col-sm offset-xl-1 mt-5 mt-lg-0 order-lg-2 d-none d-md-block">
+					<nav class="footer__nav">
+						<ul>
+							<li>
+								<a href="#">Live-Demo</a>
+								<ul>
+									<li><a href="#">Live-Demo</a></li>
+									<li><a href="#">Test-Account</a></li>
+								</ul>
+							</li>
+							<li>
+								<a href="#">Über uns</a>
+								<ul>
+									<li><a href="#">Geschichte</a></li>
+									<li><a href="#">Die Vision</a></li>
+									<li><a href="#">Das Team</a></li>
+									<li><a href="#">Partner</a></li>
+									<li><a href="#">Presse</a></li>
+									<li><a href="#">Impressum</a></li>
+									<li><a href="#">AGB</a></li>
+									<li><a href="#">Datenschutz</a></li>
+								</ul>
+							</li>
+							<li>
+								<a href="#">Karriere</a>
+								<ul>
+									<li><a href="#">Offene Positionen</a></li>
+									<li><a href="#">Initiativbewerbung</a></li>
+								</ul>
+							</li>
+							<li><a href="#">Preise</a></li>
+							<li><a href="#">Visoplan-Blog</a></li>
+							<li><a href="#">Support</a></li>
+						</ul>
+					</nav>
+				</div>
+			</div>
+			<div class="footer__copyright">
+				Illustrationen Designed by Freepik<br>
+				<a href="https://freepik.de">www.freepik.de</a>
+			</div>
+		</div>
+	</footer>
+
+	<!-- scripts -->
+	<script src="js/dist/scripts.min.js"></script>
+	<script src="js/dist/common.min.js"></script>
+</body>
+
+</html>

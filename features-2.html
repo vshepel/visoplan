@@ -147,9 +147,11 @@
 	<section id="section-welcome" class="welcome welcome--style-text" style="background: none;">
 		<div class="container">
 			<div class="row justify-content-center">
-				<div class="col-sm-10 col-lg-9">
+				<div class="col-sm-10 col-lg-8">
 					<div class="welcome__pre">Issue Management</div>
 					<h1 class="wow fadeInUp welcome__title">Issue Management direkt im IFC-Viewer an den jeweiligen Baukomponenten</h1>
+				</div>
+				<div class="col-sm-10 col-lg-5">
 					<p class="wow fadeInUp mt-4 mt-md-5">Unser Tool für das Änderungs- und Qualitätsmanagement lässt Fehlern keine Chance</p>
 				</div>
 			</div>
@@ -243,7 +245,7 @@
 				</div>
 				<div class="col-12 mt-5"></div>
 				<div class="col-sm">
-					<div class="wow fadeInUp section__title mb-4">Versionierung der BIM-Modelle</div>
+					<div class="wow fadeInUp section__title mb-4">Die BIM-Datenhistorie gewährleisten den Rundumblick</div>
 					<p class="wow fadeInUp">Mithilfe der Datenhistorie lassen sich Änderungen und behobene Fehler im Issue Management jederzeit abrufen, um Missverständnissen zwischen den Projektbeteiligten vorzubeugen</p>
 				</div>
 				<div class="col-sm offset-sm-1 mt-4 mt-sm-0">
@@ -328,7 +330,14 @@
 
 	<!-- footer -->
 	<footer id="footer" class="footer">
-		<div class="container">
+		<div class="container position-relative">
+			<div class="footer__lang">
+				<div class="mb-2">Choose your language</div>
+				<select id="choose-lang">
+					<option value="0" data-imagesrc="img/icons/germany.svg">Deutsch</option>
+					<option value="1" data-imagesrc="img/icons/united-kingdom.svg">English</option>
+				</select>
+			</div>
 			<div class="row justify-content-center justify-content-sm-between justify-content-lg-start align-items-end align-items-lg-start">
 				<div class="col-auto col-sm-6 col-lg-3 order-lg-1 text-center text-sm-left">
 					<a href="/" class="footer__logotype"><img src="img/visoplan-logo.svg" alt="Logo von Visoplan"></a>
@@ -383,6 +392,10 @@
 						</ul>
 					</nav>
 				</div>
+			</div>
+			<div class="footer__copyright">
+				Illustrationen Designed by Freepik<br>
+				<a href="https://freepik.de">www.freepik.de</a>
 			</div>
 		</div>
 	</footer>
