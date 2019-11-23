@@ -231,30 +231,12 @@
 						</div>
 						<div class="price">
 							<div class="price__before">Projektbasiert</div>
-							<div class="h2 price__title">Individueller <br>Preis</div>
+							<div id="projects-value" class="h1 price__title">0.3%</div>
 							<ul class="wow fadeInUp list list--style-checked list--size-sm">
 								<li>Besonders für große Bauprojekte geeignet</li>
 								<li>Visoplan wird auf Ihr Bauprojekt zugeschnitten</li>
 							</ul>
 							<div class="price__after mt-5">Der Preis ist unabhängig von der Anzahl an Nutzern</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
-		<section class="section">
-			<div class="container">
-				<div class="row align-items-center">
-					<div class="col-md-4">
-						<ul class="wow fadeInUp list list--style-checked">
-							<li>Besonders für große Bauprojekte geeignet</li>
-							<li>Visoplan wird auf Ihr Bauprojekt zugeschnitten</li>
-						</ul>
-					</div>
-					<div class="col-md offset-md-1 mt-5 mt-md-0">
-						<div class="price w-100">
-							<div class="price__before">Projektbasiert</div>
-							<div class="h2 price__title">Individueller <br>Preis</div>
 						</div>
 					</div>
 				</div>
@@ -323,7 +305,7 @@
 					<div class="col-lg offset-lg-1 d-sm-flex align-items-end mt-5 mt-lg-0">
 						<div class="price">
 							<div class="price__before">Nutzerbasiert</div>
-							<div class="h1 price__title">99 €</div>
+							<div id="price-value" class="h1 price__title">99 €</div>
 							<div class="price__after">im Monat <br>pro Nutzer</div>
 							<ul class="list list--style-checked list--size-sm">
 								<li>Preis je nach Anzahl der Projekte</li>
@@ -332,7 +314,7 @@
 						</div>
 						<div class="price price--style-disabled">
 							<div class="price__before">Projektbasiert</div>
-							<div class="h2 price__title">Individueller <br>Preis</div>
+							<div class="h1 price__title">0.3%</div>
 							<ul class="list list--style-checked list--size-sm">
 								<li>Besonders für große Bauprojekte geeignet</li>
 								<li>Visoplan wird auf Ihr Bauprojekt zugeschnitten</li>
@@ -343,25 +325,25 @@
 				</div>
 			</div>
 		</section>
-		<section class="section">
-			<div class="container">
-				<div class="row align-items-center">
-					<div class="col-md-4">
-						<ul class="list list--style-checked">
-							<li>Besonders für große Bauprojekte geeignet</li>
-							<li>Visoplan wird auf Ihr Bauprojekt zugeschnitten</li>
-						</ul>
-					</div>
-					<div class="col-md offset-md-1 mt-5 mt-md-0">
-						<div class="price w-100">
-							<div class="price__before">Projektbasiert</div>
-							<div class="h2 price__title">Individueller <br>Preis</div>
-						</div>
+	</div>
+	<section class="section">
+		<div class="container">
+			<div class="row align-items-center">
+				<div class="col-md-4">
+					<ul class="list list--style-checked">
+						<li>Besonders für große Bauprojekte geeignet</li>
+						<li>Visoplan wird auf Ihr Bauprojekt zugeschnitten</li>
+					</ul>
+				</div>
+				<div class="col-md offset-md-1 mt-5 mt-md-0">
+					<div class="price w-100">
+						<div class="price__before">Projektbasiert</div>
+						<div class="h2 price__title">Individueller <br>Preis</div>
 					</div>
 				</div>
 			</div>
-		</section>
-	</div>
+		</div>
+	</section>
 
 	<!-- feadback -->
 	<section id="section-feadback" class="feadback">
@@ -462,16 +444,75 @@
 	<script src="js/dist/scripts.min.js"></script>
 	<script src="js/dist/common.min.js"></script>
 	<script>
-		var projectsSettings = {
-			min: 1,
-			max: 1000,
-			from: 550,
+		var $projects = $('#range-projects');
+		var $projectsU = $('#range-projects-1');
+		var $users = $('#range-users');
+
+		$projects.ionRangeSlider({
+			from: "500 K",
 			skin: "round",
-			hide_min_max: true
+			hide_min_max: true,
+			values: [
+				"500 K", "1", "5", "15", "50", "100", "above 100"
+			],
+			onChange: function (data) {
+				var percent;
+				switch (data.from) {
+					case 0:
+						percent = '0.3%'
+						break;
+					case 1:
+						percent = '0.3%'
+						break;
+					case 2:
+						percent = '0.2%'
+						break;
+					case 3:
+						percent = '0.1%'
+						break;
+					case 4:
+						percent = '0.05%'
+						break;
+					case 5:
+						percent = '0.05%'
+						break;
+					case 6:
+						percent = '0.01%'
+						break;
+					default:
+						console.log('default');
+				}
+				$('#projects-value').text(percent);
+			}
+		});
+
+		function usersProjects() {
+			var fromProjects = $projectsU.data("from");
+			var fromUsers = $users.data("from");
+
+			$('#price-value').text((fromUsers * 99 + (fromProjects - 2) * 199) - Math.floor(fromUsers / 5) * 99 + ' €');
 		}
-		$("#range-projects").ionRangeSlider(projectsSettings);
-		$("#range-projects-1").ionRangeSlider(projectsSettings);
-		$("#range-users").ionRangeSlider(projectsSettings);
+
+		$projectsU.ionRangeSlider({
+			min: 2,
+			max: 30,
+			from: 2,
+			skin: "round",
+			hide_min_max: true,
+			onChange: function (data) {
+				usersProjects();
+			}
+		});
+		$users.ionRangeSlider({
+			min: 1,
+			max: 50,
+			from: 1,
+			skin: "round",
+			hide_min_max: true,
+			onChange: function (data) {
+				usersProjects();
+			}
+		});
 	</script>
 </body>
 
