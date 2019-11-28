@@ -144,7 +144,7 @@
 	</header>
 
 	<!-- welcome -->
-	<section id="section-welcome" class="welcome welcome--style-text">
+	<section id="section-welcome" class="welcome welcome--style-text welcome--bg-1">
 		<div class="container">
 			<div class="row justify-content-center">
 				<div class="col-sm-10 col-lg-9">
@@ -301,7 +301,7 @@
 			<div class="footer__lang">
 				<div class="mb-2">Choose your language</div>
 				<select id="choose-lang">
-					<option value="0" data-imagesrc="img/icons/germany.svg">Deutsch</option>
+					<option value="0" data-imagesrc="img/icons/germany.svg" selected>Deutsch</option>
 					<option value="1" data-imagesrc="img/icons/united-kingdom.svg">English</option>
 				</select>
 			</div>
@@ -309,22 +309,37 @@
 				<div class="col-auto col-sm-6 col-lg-3 order-lg-1 text-center text-sm-left">
 					<a href="/" class="footer__logotype"><img src="img/visoplan-logo.svg" alt="Logo von Visoplan"></a>
 					<p class="mt-5 d-none d-lg-block">Über Visoplan und BIM-Methode auf dem Laufenden bleiben</p>
-					<form class="input-group mt-4 mt-lg-5">
-						<input type="text" placeholder="Newsletter">
-						<button class="btn btn-secondary btn-sm">Anmelden</button>
-					</form>
+					<!-- Begin Mailchimp Signup Form -->
+					<div id="mc_embed_signup">
+						<form action="https://allvr.us19.list-manage.com/subscribe/post?u=de10f897fa7ff90ef0760c5d9&amp;id=f07263726d" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+							<div id="mc_embed_signup_scroll">
+								<div class="input-group mt-4 mt-lg-5">
+									<input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" placeholder="Newsletter">
+									<input type="submit" value="Anmelden" name="subscribe" id="mc-embedded-subscribe" class="btn btn-secondary btn-sm">
+								</div>
+								<div id="mce-responses" class="clear">
+									<div class="response" id="mce-error-response" style="display:none"></div>
+									<div class="response" id="mce-success-response" style="display:none"></div>
+								</div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+								<div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_de10f897fa7ff90ef0760c5d9_f07263726d" tabindex="-1" value=""></div>
+								<div class="clear"></div>
+							</div>
+						</form>
+					</div>
+					<!--End mc_embed_signup-->
 				</div>
-				<div class="col-auto order-lg-3 mt-4 mt-sm-0">
+				<div class="col-auto order-lg-3 mt-4 mt-sm-0 ml-md-auto">
 					<div class="footer__socials">
-						<a href="#"><img src="img/icons/linkedin-icon.png" alt="Icon mit Verlinkung zu LinkedIn"></a>
-						<a href="#"><img src="img/icons/xing-icon.png" alt="Icon mit Verlinkung zu Xing"></a>
-						<a href="#"><img src="img/icons/youtube-icon.png" alt="Icon mit Verlinkung zu YouTube"></a>
-						<a href="#"><img src="img/icons/instagram-icon.png" alt="Icon mit Verlinkung zu Instagram"></a>
-						<a href="#"><img src="img/icons/facebook-icon.png" alt="Icon mit Verlinkung zu Facebook"></a>
+						<a href="#"><img src="img/icons/linkedin-icon.svg" alt="Icon mit Verlinkung zu LinkedIn"></a>
+						<a href="#"><img src="img/icons/xing-icon.svg" alt="Icon mit Verlinkung zu Xing"></a>
+						<a href="#"><img src="img/icons/youtube-icon.svg" alt="Icon mit Verlinkung zu YouTube"></a>
+						<a href="#"><img src="img/icons/instagram-icon.svg" alt="Icon mit Verlinkung zu Instagram"></a>
+						<a href="#"><img src="img/icons/facebook-icon.svg" alt="Icon mit Verlinkung zu Facebook"></a>
+						<a href="#"><img src="img/icons/twitter-icon.svg" alt="Icon mit Verlinkung zu Twitter"></a>
 					</div>
 				</div>
-				<div class="col-auto col-sm offset-xl-1 mt-5 mt-lg-0 order-lg-2 d-none d-md-block">
-					<nav class="footer__nav">
+				<div class="col-lg-auto offset-xl-1 mt-5 mt-lg-0 order-lg-2 ">
+					<nav class="footer__nav d-none d-md-block">
 						<ul>
 							<li>
 								<a href="#">Live-Demo</a>
@@ -358,11 +373,11 @@
 							<li><a href="#">Support</a></li>
 						</ul>
 					</nav>
+					<div class="footer__copyright">
+						Illustrationen Designed by Freepik<br>
+						<a href="https://freepik.de">www.freepik.de</a>
+					</div>
 				</div>
-			</div>
-			<div class="footer__copyright">
-				Illustrationen Designed by Freepik<br>
-				<a href="https://freepik.de">www.freepik.de</a>
 			</div>
 		</div>
 	</footer>
