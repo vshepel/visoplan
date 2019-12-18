@@ -164,7 +164,7 @@
 				<div class="col-lg-8 col-xl">
 					<img class="wow fadeIn w-100 img-shadow" src="img/mockups/features/issue-log.png" alt="Liste an Issues im BIM-System">
 				</div>
-				<div class="col-xl-3 mt-4 mt-xl-0">
+				<div class="col-xl-3 mt-4 mt-xl-0 d-none d-md-block">
 					<div class="row">
 						<div class="col-md-6 col-lg col-xl-12">
 							<a href="#features-1" class="wow fadeInRight hover hover--style-feature align-items-start text-left p-3">
@@ -200,11 +200,11 @@
 		</div>
 		<div class="container">
 			<div class="row justify-content-center justify-content-lg-end">
-				<div class="col d-lg-none">
+				<div class="col d-none d-md-block d-lg-none">
 					<img class="wow fadeIn w-100 img-shadow" src="img/mockups/features/issue-tracking.png" alt="Issues zuweisen und nachverfolgen">
 				</div>
-				<div class="col-lg-5 d-flex flex-column flex-sm-row flex-lg-column mt-5 mt-lg-0">
-					<div class="order-lg-1 mt-lg-5 text-picture text-picture--big">
+				<div class="col-lg-5 d-flex flex-column flex-sm-row flex-lg-column mt-4 mt-md-5 mt-lg-0">
+					<div class="order-lg-1 mt-lg-5 text-picture text-picture--big d-none d-md-block">
 						<div class="wow fadeInUp font-weight-bold text-primary mb-3">Schritt 1</div>
 						<ul class="list">
 							<li>Rechtsklick auf eine Baukomponente <br>im BIM-Modell</li>
@@ -218,20 +218,24 @@
 							<li>Titel, Beschreibung und Zuständigkeit <br>ausfüllen</li>
 						</ul>
 					</div>
-					<div class="order-lg-0 mt-4 mt-sm-0 ml-sm-5 ml-lg-0">
-						<div class="wow fadeInUp font-weight-bold text-primary">Intelligente Fehlererkennung im IFC-Viewer</div>
+					<div class="order-lg-0 mt-md-4 mt-sm-0 ml-sm-5 ml-lg-0">
+						<div class="wow fadeInUp font-weight-bold text-primary d-none d-md-block">Intelligente Fehlererkennung im IFC-Viewer</div>
+						<div class="wow fadeInUp section__title text-center d-md-none">Intelligente Fehlererkennung im IFC-Viewer</div>
 						<ul class="wow fadeInUp list list--style-checked mt-5">
 							<li>Mit wenig Zeitaufwand können Fehler an den einzelnen Bauelementen erkannt, beschrieben und zugewiesen werden</li>
-							<li class="no-check">Nachdem ein sogenanntes Issue-Ticket <br>erstellt wurde, erhält der Zuständige sofort eine Benachrichtigung und kann sich mit dem Problem auseinandersetzen</li>
+							<li class="no-check d-none d-md-block">Nachdem ein sogenanntes Issue-Ticket <br>erstellt wurde, erhält der Zuständige sofort eine Benachrichtigung und kann sich mit dem Problem auseinandersetzen</li>
 							<li>Erleichtert allen Projektbeteiligten des BIM-Projektes den Arbeitsalltag und senkt Kosten</li>
 						</ul>
+					</div>
+					<div class="d-md-none text-center px-5 mt-4">
+						<img class="w-100" src="img/mockups/Screen5-01.png" alt="">
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
 
-	<div id="features-2" class="section">
+	<div id="features-2" class="section d-none d-md-block">
 		<div class="container">
 			<div class="row align-items-center justify-content-center">
 				<div class="col-lg">
@@ -245,13 +249,13 @@
 		</div>
 	</div>
 
-	<section id="features-3" class="section section--bg-light">
+	<section id="features-3" class="section section--bg-light text-center text-md-left">
 		<div class="container">
 			<div class="row justify-content-center">
-				<div class="col-sm-8">
+				<div class="col-sm-8 d-none d-md-block">
 					<img class="wow fadeIn w-100" src="img/mockups/features/issue-datenhistorie.svg" alt="Alle Issues auf einen Blick ersichtlich">
 				</div>
-				<div class="col-12 mt-5"></div>
+				<div class="col-12 mt-5 d-none d-md-block"></div>
 				<div class="col-lg">
 					<div class="wow fadeInUp section__title mb-4">Die BIM-Datenhistorie gewährleisten den Rundumblick</div>
 					<p class="wow fadeInUp">Mithilfe der Datenhistorie lassen sich Änderungen und <br>behobene Fehler im Issue Management jederzeit abrufen, um Missverständnissen zwischen den Projektbeteiligten vorzubeugen</p>
@@ -264,7 +268,21 @@
 		</div>
 	</section>
 
-	<section class="section">
+	<div class="section d-md-none">
+		<div class="container">
+			<div class="row align-items-center justify-content-center">
+				<div class="col-8 col-lg-6 offset-lg-1 mb-5 mt-lg-0">
+					<img class="wow fadeIn w-100" src="img/graphics/features/bim-daten.svg" alt="BIM-Daten im BIM-System tracken">
+				</div>
+				<div class="col-lg">
+					<div class="wow fadeInUp section__title text-center text-lg-left mb-5">Kollisionen erkennen und in Visoplan importieren</div>
+					<p class="wow fadeInUp text-center text-lg-left mt-5">Die gewonnenen Daten aus einem ollisionserkennungstool können Sie per IFC-Datei in Visoplan importieren, sodass Sie manuell sowie automatisch erkannte Issues zentral an einem Ort vorfinden.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<section class="section d-none d-md-block">
 		<div class="container">
 			<div class="section__title mb-5">Frequently Asked Questions</div>
 

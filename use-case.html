@@ -149,9 +149,9 @@
 			<div class="row align-items-center justify-content-center justify-content-lg-start">
 				<div class="col-sm-10 col-md-8 col-lg">
 					<h1 class="wow fadeInUp welcome__title">Alle Stakeholder kollaborieren über eine BIM-Software</h1>
-					<p class="wow fadeInUp mt-4 mt-md-5">Visoplan ist die zentrale Schnittstelle zwischen allen CAD-Tools. Mit geringem Aufwand lassen sich die verschiedenen IFC-Dateien exportieren und im IFC-Viewer automatisch zu einem BIM-Fachmodell zusammenführen. Darüber hinaus finden die gesamte Kommunikation und der Datenaustausch über unsere Plattform statt.</p>
+					<p class="wow fadeInUp mt-4 mt-md-5 d-none d-md-block">Visoplan ist die zentrale Schnittstelle zwischen allen CAD-Tools. Mit geringem Aufwand lassen sich die verschiedenen IFC-Dateien exportieren und im IFC-Viewer automatisch zu einem BIM-Fachmodell zusammenführen. Darüber hinaus finden die gesamte Kommunikation und der Datenaustausch über unsere Plattform statt.</p>
 				</div>
-				<div class="col-10 col-lg-auto mt-4 mt-lg-0 offset-lg-2">
+				<div class="col-10 col-lg-auto mt-4 mt-lg-0 offset-lg-2 d-none d-md-block">
 					<img src="img/graphics/usecase/bim-kollaboration.svg" alt="alle Beteiligten des Bauprojekts kollaborieren in einer BIM-Software">
 				</div>
 			</div>
@@ -160,29 +160,32 @@
 
 	<section class="section mt-sm-5">
 		<div class="container">
+			<div class="d-md-none text-center mb-4 px-5">
+				<img src="img/graphics/usecase/bim-kollaboration.svg" alt="alle Beteiligten des Bauprojekts kollaborieren in einer BIM-Software">
+			</div>
 			<div class="row justify-content-center">
-				<div class="col-10 col-sm-6 col-md-4 col-lg-3">
-					<div data-tab="tab-1" class="wow fadeInUp hover hover--style-shadow is-active">
+				<div class="col-6 col-md-4 col-lg-3">
+					<div data-tab="tab-1" class="wow fadeInUp hover hover--style-shadow py-2 is-active">
 						<div class="h5 shadow-element">Architekten und Bauingenieure</div>
-						<img class="mt-4" src="img/graphics/usecase/architekten-und-bauningenieure.svg" style="height: 100px;" alt="illustrierte Architektin bei der Arbeit">
+						<img class="mt-4 d-none d-md-block" src="img/graphics/usecase/architekten-und-bauningenieure.svg" style="height: 100px;" alt="illustrierte Architektin bei der Arbeit">
 					</div>
 				</div>
-				<div class="col-10 col-sm-6 col-md-4 col-lg-3">
-					<div data-tab="tab-2" class="wow fadeInUp hover hover--style-shadow" data-wow-delay="0.1s">
+				<div class="col-6 col-md-4 col-lg-3">
+					<div data-tab="tab-2" class="wow fadeInUp hover hover--style-shadow py-2" data-wow-delay="0.1s">
 						<div class="h5 shadow-element">Projektentwickler und Bauherren</div>
-						<img class="mt-4" src="img/graphics/usecase/projektentwickler-und-bauherren.svg" style="height: 100px;" alt="illustrierter Bauherr bei der Arbeit">
+						<img class="mt-4 d-none d-md-block" src="img/graphics/usecase/projektentwickler-und-bauherren.svg" style="height: 100px;" alt="illustrierter Bauherr bei der Arbeit">
 					</div>
 				</div>
-				<div class="col-10 col-sm-6 col-md-4 col-lg-3">
-					<div data-tab="tab-3" class="wow fadeInUp hover hover--style-shadow" data-wow-delay="0.2s">
+				<div class="col-6 col-md-4 col-lg-3">
+					<div data-tab="tab-3" class="wow fadeInUp hover hover--style-shadow py-2" data-wow-delay="0.2s">
 						<div class="h5 shadow-element">Generalunternehmer und Bauunternehmer</div>
-						<img class="mt-4" src="img/graphics/usecase/generalunternehmer-und-bauunternehmer.svg" style="height: 100px;" alt="illustrierter Bauunternehmer bei der Arbeit">
+						<img class="mt-4 d-none d-md-block" src="img/graphics/usecase/generalunternehmer-und-bauunternehmer.svg" style="height: 100px;" alt="illustrierter Bauunternehmer bei der Arbeit">
 					</div>
 				</div>
-				<div class="col-10 col-sm-6 col-md-4 col-lg-3">
-					<div data-tab="tab-4" class="wow fadeInUp hover hover--style-shadow" data-wow-delay="0.3s">
+				<div class="col-6 col-md-4 col-lg-3">
+					<div data-tab="tab-4" class="wow fadeInUp hover hover--style-shadow py-2" data-wow-delay="0.3s">
 						<div class="h5 shadow-element">BIM-Manager und Projektsteuerer</div>
-						<img class="mt-4" src="img/graphics/usecase/bim-manager-und-projektsteuerer.svg" style="height: 100px;" alt="illustrierter BIM-Manager bei der Arbeit">
+						<img class="mt-4 d-none d-md-block" src="img/graphics/usecase/bim-manager-und-projektsteuerer.svg" style="height: 100px;" alt="illustrierter BIM-Manager bei der Arbeit">
 					</div>
 				</div>
 			</div>
@@ -190,7 +193,7 @@
 	</section>
 
 	<div data-tab-content="tab-1" class="is-active">
-		<div class="section mt-5 pt-md-4">
+		<div class="section mt-5 pt-md-4 d-none d-md-block">
 			<div class="container">
 				<div class="wow fadeInUp section__title text-center mb-0">Architekten und Bauingenieure</div>
 				<div class="row align-items-center">
@@ -209,7 +212,15 @@
 			</div>
 		</div>
 
-		<section class="section section--bg-light">
+		<div class="section section--bg-light mt-5 pt-md-4 d-md-none text-center">
+			<div class="container">
+				<div class="wow fadeInUp section__title text-center mb-0">Reibungslose IFC-Integration aus Ihrer CAD-Anwendung</div>
+				<img class="w-100 mt-4 wow fadeIn" src="img/mockups/Group 4.png" alt="">
+				<p class="wow fadeInUp">Exportieren Sie das 3D-Modell als IFC-Datei und integrieren es in Visoplan per Drag & Drop. Die Datei wird automatisch mit den BIM-Fachmodellen der anderen Gewerke zu einem digitalen Zwilling zusammengeführt.</p>
+			</div>
+		</div>
+
+		<section class="section section--bg-light d-none d-md-block">
 			<div class="container">
 				<div class="row justify-content-center" data-click-parent>
 					<div class="col-lg-8" class="wow fadeInUp w-100">
@@ -256,6 +267,17 @@
 			</div>
 		</section>
 
+		<section class="section d-md-none">
+			<div class="container">
+				<ul class="wow fadeInUp list list--style-checked mt-5">
+					<li>Automatische Zusammenführung verschiedener Fachmodelle zu einem digitalen Zwilling</li>
+					<li>Live-Meeting direkt im IFC-Viewer mit mehreren Teilnehmern gleichzeitig
+					</li>
+					<li>Schnelles Erkennen von Fehlern zwischen den einzelnen BIM-Fachmodellen</li>
+				</ul>
+			</div>
+		</section>
+
 		<div class="section">
 			<div class="container">
 				<div class="row align-items-center">
@@ -270,12 +292,13 @@
 						<img class="wow fadeIn w-100" src="img/graphics/usecase/meeting-3d-modell-ifc-viewer.png" alt="Kollaboration im IFC-Viewer">
 					</div>
 				</div>
+				<img class="wow fadeIn w-100 img-shadow mt-5 d-md-none" src="img/mockups/features/bim-kollaborationsplattform.png" alt="Kollaboration am BIM-Modell">
 			</div>
 		</div>
 	</div>
 
 	<div data-tab-content="tab-2">
-		<div class="section mt-5 pt-md-4">
+		<div class="section mt-5 pt-md-4 d-none d-md-block">
 			<div class="container">
 				<div class=" section__title text-center mb-0">Projektentwickler und Bauherren</div>
 				<div class="row align-items-center">
@@ -295,7 +318,16 @@
 			</div>
 		</div>
 
-		<section class="section section--bg-light">
+		<div class="section section--bg-light mt-5 pt-md-4 d-md-none text-center">
+			<div class="container">
+				<div class="wow fadeInUp section__title text-center mb-0">Zentrales Controlling des BIM-
+					Bauprojektes</div>
+				<img class="w-100 mt-4 wow fadeIn" src="img/mockups/screen6-01.png" alt="">
+				<p class="wow fadeInUp">Managen Sie ihre Bauprojekte zentral mit Visoplan. Dank der vielfältigen Funktionen zur Kollaboration sowie der BIM-Datenhistorie, behalten Sie stets den Überblick in allen Phasen der Bauplanung.</p>
+			</div>
+		</div>
+
+		<section class="section section--bg-light d-none d-md-block">
 			<div class="container">
 				<div class="row justify-content-center" data-click-parent>
 					<div class="col-lg-8" class=" w-100">
@@ -347,6 +379,18 @@
 			</div>
 		</section>
 
+		<section class="section d-md-none">
+			<div class="container">
+				<ul class="wow fadeInUp list list--style-checked mt-5">
+					<li>Kommunikation und Datenaustausch zentral steuern</li>
+					<li>Übersichtliche und einsteigerfreundliche Benutzeroberfläche
+					</li>
+					<li>Live-Meeting direkt im IFC-Viewer und mit mehreren Teilnehmern gleichzeitig</li>
+					<li>Automatische Versionierung und Kategorisierung der BIM-Daten</li>
+				</ul>
+			</div>
+		</section>
+
 		<div class="section">
 			<div class="container">
 				<div class="row align-items-center">
@@ -361,12 +405,13 @@
 						<img class="w-100" src="img/graphics/usecase/meeting-3d-modell-ifc-viewer.png" alt="Kollaboration im IFC-Viewer">
 					</div>
 				</div>
+				<img class="wow fadeIn w-100 img-shadow mt-5 d-md-none" src="img/mockups/use-case/3.png" alt="">
 			</div>
 		</div>
 	</div>
 
 	<div data-tab-content="tab-3">
-		<div class="section mt-5 pt-md-4">
+		<div class="section mt-5 pt-md-4 d-none d-md-block">
 			<div class="container">
 				<div class=" section__title text-center mb-0">Generalunternehmer und Bauunternehmer</div>
 				<div class="row align-items-center">
@@ -386,7 +431,18 @@
 			</div>
 		</div>
 
-		<section class="section section--bg-light">
+		<div class="section section--bg-light mt-5 pt-md-4 d-md-none text-center">
+			<div class="container">
+				<div class="wow fadeInUp section__title text-center mb-0">Zentrales Controlling aller 
+					Daten verschiedener CAD-Systeme </div>
+				<img class="w-100 mt-4 wow fadeIn" src="img/mockups/use-case/5.png" alt="">
+				<p class="wow fadeInUp">Erleichtern Sie sich den Arbeitsalltag, indem Sie Bauprojekte strukturiert und zentral steuern. Fügen Sie in wenigen Schritten die IFC-Files unterschiedlicher CAD-Tools zu einem Fach-modell zusammen, welches sämtliche Bauinformationen
+					enthält. Lenken und verwalten Sie die gesamte Ko-
+					mmunikation zwischen allen Baubeteiligten über Visoplan.</p>
+			</div>
+		</div>
+
+		<section class="section section--bg-light d-none d-md-block">
 			<div class="container">
 				<div class="row justify-content-center" data-click-parent>
 					<div class="col-lg-8" class=" w-100">
@@ -433,6 +489,18 @@
 			</div>
 		</section>
 
+		<section class="section d-md-none">
+			<div class="container">
+				<ul class="wow fadeInUp list list--style-checked mt-5">
+					<li>Kommunikation und Datenaustausch zentral managen</li>
+					<li>BIM-Datenhistorie – alle Daten sind archiviert und kategorisiert
+					</li>
+					<li>Übersichtliche und einsteigerfreundliche BIM-Benutzeroberfläche</li>
+					<li>Live-Meeting direkt im IFC-Viewer und mit mehreren Teilnehmern gleichzeitig</li>
+				</ul>
+			</div>
+		</section>
+
 		<div class="section">
 			<div class="container">
 				<div class="row align-items-center">
@@ -447,12 +515,13 @@
 						<img class="w-100" src="img/graphics/usecase/meeting-3d-modell-ifc-viewer.png" alt="Kollaboration im IFC-Viewer">
 					</div>
 				</div>
+				<img class="wow fadeIn w-100 img-shadow mt-5 d-md-none" src="img/mockups/use-case/3.png" alt="">
 			</div>
 		</div>
 	</div>
 
 	<div data-tab-content="tab-4">
-		<div class="section mt-5 pt-md-4">
+		<div class="section mt-5 pt-md-4 d-none d-md-block">
 			<div class="container">
 				<div class=" section__title text-center mb-0">BIM-Manager und Projektsteuerer</div>
 				<div class="row align-items-center">
@@ -472,7 +541,16 @@
 			</div>
 		</div>
 
-		<section class="section section--bg-light">
+		<div class="section section--bg-light mt-5 pt-md-4 d-md-none text-center">
+			<div class="container">
+				<div class="wow fadeInUp section__title text-center mb-0">Optimaler Übergang von der 
+					Planungs- in die Bauphase</div>
+				<img class="w-100 mt-4 wow fadeIn" src="img/mockups/use-case/5.png" alt="">
+				<p class="wow fadeInUp">Unsere Software archiviert und kategorisiert alle Daten, die in der Bauplanungsphase bei Visoplan hochgeladen werden. Dadurch können in der Bauphase sämtliche Informationen zum BIM-Projekt abgerufen werden.Missverständnisse durch Probleme beim Informationsaustausch oder fehlende Daten werden somit vermieden und die Kommunikation zwischen der Planungs- und Bauphase kann effizienter erfolgen.</p>
+			</div>
+		</div>
+
+		<section class="section section--bg-light d-none d-md-block">
 			<div class="container">
 				<div class="row justify-content-center" data-click-parent>
 					<div class="col-lg-8" class=" w-100">
@@ -520,6 +598,18 @@
 			</div>
 		</section>
 
+		<section class="section d-md-none">
+			<div class="container">
+				<ul class="wow fadeInUp list list--style-checked mt-5">
+					<li>Schnelles Erkennen von Planungsfehlern und effizienter Modellabgleich</li>
+					<li>Nachverfolgbarkeit der BIM-Bauplanungsphase
+					</li>
+					<li>Teilnahme an sämtlichen BIM-Bauplanungsbesprechungen</li>
+					<li>Änderungen und Probleme können direkt am 3D-Modell betrachtet und evaluiert werden</li>
+				</ul>
+			</div>
+		</section>
+
 		<div class="section">
 			<div class="container">
 				<div class="row align-items-center">
@@ -534,11 +624,12 @@
 						<img class="w-100" src="img/graphics/usecase/meeting-3d-modell-ifc-viewer.png" alt="Kollaboration im IFC-Viewer">
 					</div>
 				</div>
+				<img class="wow fadeIn w-100 img-shadow mt-5 d-md-none" src="img/mockups/screen6-01.png" alt="">
 			</div>
 		</div>
 	</div>
 
-	<section class="section">
+	<section class="section d-none d-md-block">
 		<div class="container">
 			<div class="section__title mb-5">Frequently Asked Questions</div>
 
