@@ -244,7 +244,7 @@
 			<div class="section__title mb-2">Team</div>
 			<p class="h2 font-weight-normal m-0">Together everyone achieves more</p>
 
-			<div id="team-slider" class="team-slider mt-5">
+			<div id="team-slider" class="team-slider mt-5 px-4 px-md-0">
 				<div>
 					<div class="team-slider-item">
 						<img src="img/Bildschirmfoto 2019-12-13 um 12.42.45.png" alt="">
@@ -293,11 +293,17 @@
 					<img class="feadback__icon" src="img/icons/message.svg" alt="">
 					<div class="h3 my-4">Lassen Sie sich von uns beraten</div>
 					<form class="feadback__form">
-						<input type="text" placeholder="E-Mail hier eingeben">
-						<input type="text" placeholder="Name">
+						<div class="row">
+							<div class="col">
+								<input type="text" placeholder="E-Mail Adresse">
+							</div>
+							<div class="col">
+								<input type="text" placeholder="Vollständiger Name">
+							</div>
+						</div>
 						<div class="input-group">
-							<textarea rows="7" placeholder="Nachricht"></textarea>
-							<button class="btn btn-primary btn-sm">Jetzt teilnehmen</button>
+							<textarea rows="7" placeholder="Text eingeben"></textarea>
+							<button class="btn btn-primary btn-sm">Absenden</button>
 						</div>
 					</form>
 				</div>
@@ -315,31 +321,23 @@
 					<option value="1" data-imagesrc="img/icons/united-kingdom.svg">English</option>
 				</select>
 			</div>
-			<div
-				class="row justify-content-center justify-content-sm-between justify-content-lg-start align-items-end align-items-lg-start">
+			<div class="row justify-content-center justify-content-sm-between justify-content-lg-start align-items-end align-items-lg-start">
 				<div class="col-6 col-lg-3 order-lg-1 text-center text-sm-left">
 					<a href="/" class="footer__logotype"><img src="img/visoplan-logo.svg" alt="Logo von Visoplan"></a>
 					<p class="mt-5 d-none d-lg-block">Über Visoplan und BIM-Methode auf dem Laufenden bleiben</p>
 					<!-- Begin Mailchimp Signup Form -->
 					<div id="mc_embed_signup">
-						<form
-							action="https://allvr.us19.list-manage.com/subscribe/post?u=de10f897fa7ff90ef0760c5d9&amp;id=f07263726d"
-							method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form"
-							class="validate" target="_blank" novalidate>
+						<form action="https://allvr.us19.list-manage.com/subscribe/post?u=de10f897fa7ff90ef0760c5d9&amp;id=f07263726d" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
 							<div id="mc_embed_signup_scroll">
 								<div class="input-group mt-4 mt-lg-5">
-									<input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL"
-										placeholder="Newsletter">
-									<input type="submit" value="Anmelden" name="subscribe" id="mc-embedded-subscribe"
-										class="btn btn-secondary btn-sm">
+									<input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" placeholder="Newsletter">
+									<input type="submit" value="Anmelden" name="subscribe" id="mc-embedded-subscribe" class="btn btn-secondary btn-sm">
 								</div>
 								<div id="mce-responses" class="clear">
 									<div class="response" id="mce-error-response" style="display:none"></div>
 									<div class="response" id="mce-success-response" style="display:none"></div>
-								</div>
-								<!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-								<div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text"
-										name="b_de10f897fa7ff90ef0760c5d9_f07263726d" tabindex="-1" value=""></div>
+								</div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+								<div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_de10f897fa7ff90ef0760c5d9_f07263726d" tabindex="-1" value=""></div>
 								<div class="clear"></div>
 							</div>
 						</form>
@@ -407,22 +405,17 @@
 		$(function () {
 			$('#team-slider').slick({
 				infinite: true,
-				slidesToShow: 3,
-				slidesToScroll: 3,
+				slidesToShow: 2,
+				slidesToScroll: 2,
 				appendDots: '.team-slider-dots',
+				dots: true,
 				responsive: [
 					{
-						breakpoint: 992,
-						settings: {
-							slidesToShow: 2,
-							slidesToScroll: 2
-						}
-					}, {
 						breakpoint: 768,
 						settings: {
 							slidesToShow: 1,
 							slidesToScroll: 1,
-							dots: true
+							arrows: false
 						}
 					}
 				]

@@ -192,18 +192,18 @@
 						</div>
 					</div>
 				</div>
-				<div class="col-md-5 col-lg-5 col-xl-4 offset-md-1 offset-xl-2 mt-5 mt-sm-0">
+				<div class="col-md-5 col-lg-5 col-xl-4 offset-md-1 offset-xl-2 mt-2 mt-sm-0">
 					<div class="px-5 mb-5 d-none d-md-block">
 						<img class="wow fadeIn w-100" src="img/graphics/imprint/123.svg" alt="">
 					</div>
 					<div class="custom-control custom-checkbox my-4">
 						<input type="checkbox" class="custom-control-input" id="customCheck1">
-						<label class="custom-control-label" for="customCheck1">Ich stimme der <a href="#">Datenschutzerklärung</a> und den <a href="#">Geschäftsbedigungen</a> zu.</label>
+						<label class="custom-control-label font-small-mobile" for="customCheck1">Ich stimme der <a href="#">Datenschutzerklärung</a> und den <br class="d-md-none"><a href="#">Geschäftsbedigungen</a> zu.</label>
 					</div>
 					<div class="custom-control custom-checkbox my-4">
 						<input type="checkbox" class="custom-control-input" id="customCheck2">
-						<label class="custom-control-label" for="customCheck2">Informieren Sie mich über Neuigkeiten zu 
-							Visoplan.</label>
+						<label class="custom-control-label font-small-mobile" for="customCheck2">Informieren Sie mich über Neuigkeiten zu 
+							<br class="d-md-none">Visoplan.</label>
 					</div>
 					<p class="text-muted my-4">Mit * markierte Felder sind Pflichteingaben</p>
 					<a href="#" class="btn btn-primary">Jetzt downloaden</a>
@@ -267,11 +267,17 @@
 					<img class="feadback__icon" src="img/icons/message.svg" alt="">
 					<div class="h3 my-4">Lassen Sie sich von uns beraten</div>
 					<form class="feadback__form">
-						<input type="text" placeholder="E-Mail hier eingeben">
-						<input type="text" placeholder="Name">
+						<div class="row">
+							<div class="col">
+								<input type="text" placeholder="E-Mail Adresse">
+							</div>
+							<div class="col">
+								<input type="text" placeholder="Vollständiger Name">
+							</div>
+						</div>
 						<div class="input-group">
-							<textarea rows="7" placeholder="Nachricht"></textarea>
-							<button class="btn btn-primary btn-sm">Jetzt teilnehmen</button>
+							<textarea rows="7" placeholder="Text eingeben"></textarea>
+							<button class="btn btn-primary btn-sm">Absenden</button>
 						</div>
 					</form>
 				</div>
