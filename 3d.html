@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<title>Visoplan | Der einzigartige IFC-Viewer von Visoplan</title>
+	<meta name="description" content="BIM-Projekte effizienter realisieren. Fachmodelle zusammenführen. Live-Meetings am 3D-Modell. Kommunikation und Datenaustausch zentral managen.">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- favicon -->
+	<link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
+	<link rel="manifest" href="img/favicon/site.webmanifest">
+	<link rel="mask-icon" href="img/favicon/safari-pinned-tab.svg" color="#18a5c9">
+	<meta name="apple-mobile-web-app-title" content="Visoplan">
+	<meta name="application-name" content="Visoplan">
+	<meta name="msapplication-TileColor" content="#ffffff">
+	<meta name="theme-color" content="#ffffff">
+
+	<!-- style -->
+	<link rel="stylesheet" href="css/main.min.css">
+</head>
+
+<body>
+	<!-- overlay -->
+	<div id="overlay" class="overlay"></div>
+
+	<!-- mobile menu -->
+	<div id="menu" class="menu">
+		<button type="button" class="header__call align-self-start"><img src="img/icons/menu.svg" alt=""></button>
+		<div class="menu__divider"></div>
+		<nav>
+			<ul>
+				<li><a href="#">Start</a></li>
+				<li class="expand-nav">
+					<div><a href="#">Eigenschaften</a></div>
+					<ul>
+						<li><a href="#">BIM-Management</a></li>
+						<li><a href="#">BIM-Kollaborationsplattform</a></li>
+						<li><a href="#">Issue Management</a></li>
+					</ul>
+				</li>
+				<li><a href="#">Preise</a></li>
+				<li><a href="#">Anwendung</a></li>
+				<li><a href="#">Trial & Live Demo</a></li>
+			</ul>
+		</nav>
+		<div class="menu__divider"></div>
+		<nav>
+			<ul>
+				<li class="expand-nav">
+					<div><a href="#">Über Uns</a></div>
+					<ul>
+						<li><a href="#">Presse</a></li>
+						<li><a href="#">Team</a></li>
+						<li><a href="#">Karriere</a></li>
+						<li><a href="#">Blog</a></li>
+					</ul>
+				</li>
+				<li><a href="#">Support</a></li>
+				<li><a href="#">AGB</a></li>
+				<li><a href="#">Impressum</a></li>
+				<li><a href="#">Datenschutz</a></li>
+			</ul>
+		</nav>
+		<div class="menu__socials mt-auto">
+			<a href="#"><img src="img/icons/linkedin-icon.svg" alt="Icon mit Verlinkung zu LinkedIn"></a>
+			<a href="#"><img src="img/icons/xing-icon.svg" alt="Icon mit Verlinkung zu Xing"></a>
+			<a href="#"><img src="img/icons/youtube-icon.svg" alt="Icon mit Verlinkung zu YouTube"></a>
+			<a href="#"><img src="img/icons/instagram-icon.svg" alt="Icon mit Verlinkung zu Instagram"></a>
+			<a href="#"><img src="img/icons/facebook-icon.svg" alt="Icon mit Verlinkung zu Facebook"></a>
+			<a href="#"><img src="img/icons/twitter-icon.svg" alt="Icon mit Verlinkung zu Twitter"></a>
+		</div>
+	</div>
+
+	<!-- cookie -->
+	<div id="cookie" class="cookie">
+		<div class="container">
+			<div class="row align-items-center">
+				<div class="col">
+					<p>Visoplan verwendet Cookies, um den bestmöglichen Service zu gewährleisten. Wenn Sie auf der Seite weitersurfen, stimmen Sie der <a href="/privacy.html">Cookie-Nutzung</a> zu.</p>
+				</div>
+				<div class="col-auto">
+					<a href="#" id="cookie-accept" class="btn btn-primary btn-sm">Akzeptieren</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- header -->
+	<header id="header" class="wow fadeIn header header--color-white">
+		<div class="container">
+			<div class="row align-items-center justify-content-center justify-content-md-start">
+				<div class="col-auto mr-md-auto">
+					<a href="/" class="header__logotype"><img src="img/visoplan-logo.svg" alt="Logo von Visoplan"></a>
+					<a href="/" class="header__logotype header__logotype_white"><img src="img/visoplan-logo-white.svg" alt="Logo von Visoplan"></a>
+				</div>
+				<div class="col-auto d-none d-md-block position-static">
+					<nav class="header__nav">
+						<ul>
+							<li><a href="#">Start</a></li>
+							<li><a href="#">Kontakt</a></li>
+						</ul>
+					</nav>
+				</div>
+			</div>
+		</div>
+	</header>
+
+	<!-- welcome -->
+	<section class="welcome-3d">
+		<div class="container">
+			<div class="row flex-column align-items-center">
+				<div class="col-lg-6">
+					<div class="h1">Der einzigartige IFC-Viewer <br class="d-none d-sm-block">von Visoplan</div>
+					<p>Online-Meetings am 3D BIM-Modell. Unterstützt jedes IFC-Format. <br class="d-none d-sm-block">Erhalten Sie den IFC-Viewer von Visoplan vollständig kostenfrei!</p>
+					<div class="mt-5"><b>Nur für kurze Zeit.</b></div>
+				</div>
+				<div class="col-md-6 col-lg-4">
+					<form class="mt-4 mt-sm-5">
+						<div class="input-group">
+							<input type="text" placeholder="E-Mail-Adresse eintragen">
+							<button class="btn btn-primary btn-sm">Jetzt anfragen</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- advantages -->
+	<section class="advantages">
+		<div class="container">
+			<div class="row flex-column flex-lg-row align-items-center align-items-lg-start">
+				<div class="col-md-8 col-lg-4">
+					<div class="advantages__item">
+						<div class="h2 advantages__title">Grenzenlos</div>
+						<p>Der IFC-Viewer unterstützt <br class="d-none d-sm-block">sämtliche IFC-Formate sowie <br class="d-none d-sm-block">das BCF XML Format für eine <br class="d-none d-sm-block">lückenlose Zusammenarbeit.</p>
+					</div>
+				</div>
+				<div class="col-md-8 col-lg-4">
+					<div class="advantages__item">
+						<div class="h2 advantages__title">Automatisiert</div>
+						<p>Die einzelnen BIM-Modelle <br class="d-none d-sm-block">werdenautomatisch zu einem <br class="d-none d-sm-block">Digitalen Zwilling mit allen <br class="d-none d-sm-block">Bauinformationen verknüpft.</p>
+					</div>
+				</div>
+				<div class="col-md-8 col-lg-4">
+					<div class="advantages__item mb-0">
+						<div class="h2 advantages__title">Intuitiv</div>
+						<p>Der einsteigerfreundliche <br class="d-none d-sm-block">IFC-Viewer ermöglicht das <br class="d-none d-sm-block">Arbeiten am Digitalen Zwilling <br class="d-none d-sm-block">ohne lange Einarbeitung.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="block-3d">
+		<div class="container">
+			<div class="row justify-content-center">
+				<div class="col-lg offset-lg-1 order-lg-1">
+					<img src="img/3d-1.png" alt="">
+				</div>
+				<div class="col-md-8 col-lg-4 mt-5 mt-lg-0">
+					<div class="h2">Schnelles Hochladen <br class="d-none d-lg-block">der IFC-Dateien</div>
+					<p>Der intelligente Algorithmus führt alle <br class="d-none d-lg-block">IFC-Daten reibungslos zusammen, <br class="d-none d-lg-block">sodass Ihnen ein fehlerfreier Digitaler <br class="d-none d-lg-block">Zwilling im BIM-Viewer zur Verfügung <br class="d-none d-lg-block">steht.</p>
+					<div class="h2 mt-5">Automatische <br class="d-none d-lg-block">IFC-Datenverknüpfung</div>
+					<p>Per Drag & Drop ziehen Sie die Dateien <br class="d-none d-lg-block">bequem von Ihrem Rechner in den IFC-<br class="d-none d-lg-block">Viewer und schon kann es losgehen.</p>
+					<div class="mt-5">
+						<a href="#" class="link">Mehr erfahren</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="block-3d block-3d--bg-white">
+		<div class="container">
+			<div class="row justify-content-center align-items-center">
+				<div class="col-lg">
+					<img src="img/3d-2.png" class="d-none d-lg-block" alt="">
+					<img src="img/3d-2-1.png" class="d-lg-none" alt="">
+				</div>
+				<div class="col-md-8 col-lg-4 offset-lg-1 mt-5 mt-lg-0">
+					<div class="h2">Online-Meeting am 
+						<br class="d-none d-sm-block">Digitalen Zwilling</div>
+					<p>Der Visoplan IFC-Viewer geht über die <br class="d-none d-lg-block">Visualisierung des Digitalen Zwillings <br class="d-none d-lg-block">hinaus und ermöglicht Ihnen ein Online-<br class="d-none d-lg-block">Meeting mit allen Projektbeteiligten direkt <br class="d-none d-lg-block">am 3D BIM-Modell. Eine Videokonferenz <br class="d-none d-lg-block">direkt am Digitalen Zwilling!</p>
+					<img src="img/3d-2-2.png" class="mt-5 d-lg-none" alt="">
+					<p class="mt-5">Sparen Sie Reisekosten sowie wertvolle <br class="d-none d-lg-block">Zeit ein, indem Sie Baubesprechungen <br class="d-none d-lg-block">digital und von jedem Ort der Welt aus <br class="d-none d-lg-block">durch-führen können. Somit können <br class="d-none d-lg-block">Änderungen am 3D BIM-Modell <br class="d-none d-lg-block">besprochen und im Anschluss auch direkt <br class="d-none d-lg-block">vom Arbeitsplatz aus umgesetzt werden.</p>
+					<div class="mt-5">
+						<a href="#" class="link">Mehr erfahren</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="block-3d block-3d__dots overflow-hidden">
+		<div class="container">
+			<div class="row justify-content-center justify-content-lg-start align-items-center flex-lg-nowrap">
+				<div class="col-lg offset-lg-1 order-lg-1">
+					<img src="img/3d-3.png" class="w-initial" alt="">
+				</div>
+				<div class="col-md-8 col-lg-5 mt-5 mt-lg-0 flex-shrink-0">
+					<div class="h2">Im Homeoffice oder am Strand 
+						<br class="d-none d-sm-block">– von jedem Ort der Welt <br class="d-none d-sm-block">zusammenarbeiten</div>
+					<p>Sollten Sie aus gesundheitlichen Gründen oder aufgrund von Vorfällen wie dem Coronavirus (Covid-19) eine Zeit lang nur im Homeoffice arbeiten können, müssen wichtige Termine nicht ausfallen oder verschoben werden. Schließlich können Sie und andere Projektbeteiligte jederzeit und überall auf den Visoplan IFC-Viewer zurückgreifen.</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="block-3d block-3d--bg-white block-3d__dots">
+		<div class="container">
+			<div class="row align-items-center justify-content-center">
+				<div class="col-lg">
+					<img src="img/3d-4.png" alt="">
+				</div>
+				<div class="col-md-8 col-lg-4 offset-lg-1">
+					<div class="h2">Nach Ebenen und BIM-Komponenten filtern</div>
+					<p>Sie möchten nur die erste Etage, den TGA-Plan oder einen ganz bestimmten Raum betrachten? Mit dem Visoplan IFC-Viewer ist das Filtern nach spezifischen Daten kein Problem und im Handumdrehen erledigt.</p>
+					<a href="#" class="link mt-5">Mehr erfahren</a>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="block-3d block-3d--bg-grey">
+		<div class="container">
+			<div class="row align-items-center justify-content-center">
+				<div class="col-md-8 col-lg-4 d-flex flex-column">
+					<div class="h2">Follow-Modus</div>
+
+					<div class="block-3d__form mt-5 order-lg-1 mb-4 mb-lg-0">
+						<div class="d-inline-flex align-items-center">
+							<img src="img/profile.png" class="mr-2" alt="">
+							<div class="h-4">Fritz Müller</div>
+						</div>
+						<p class="mt-0 mb-3">Requested for you to follow him</p>
+						<div class="block-3d__form-footer">
+							<a href="#" class="btn btn-primary btn-sm">Annehmen</a>
+						</div>
+					</div>
+					
+					<p>Gemeinsam können Sie im BIM-Viewer virtuell durch den Digitalen Zwilling spazieren. Sobald eine Person den Follow-Modus aktiviert, sehen die anderen Projektteilnehmer exakt dasselbe Bild wie der Gruppenführer. Mithilfe des Markie-rungswerkzeugs können Dinge visuell gezeigt werden.</p>
+					
+				</div>
+				<div class="col-lg offset-lg-1 mt-5 mt-lg-0">
+					<img src="img/3d-5.png" class="d-none d-lg-block" alt="">
+					<img src="img/3d-5-1.png" class="d-lg-none" alt="">
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="block-3d block-3d--bg-white block-3d__dots r-p-mob">
+		<div class="container">
+			<div class="row align-items-center justify-content-center">
+				<div class="col-md-8 col-lg-4 offset-lg-1 order-lg-1">
+					<div class="h2">Issue Management</div>
+					<p>Mit wenigen Klicks können Sie Issues identifizieren, beschreiben und der zu-ständigen Person zuweisen. Mithilfe des BCF-Formats wird die Person sofort be-nachrichtigt und kann sich mit dem Issue auseinandersetzen.</p>
+					<a href="#" class="link mt-5">Mehr erfahren</a>
+				</div>
+				<div class="col-lg">
+					<img src="img/3d-6.png" alt="">
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="text-center">
+		<div class="container">
+			<div class="row justify-content-center">
+				<div class="col-md-8 col-lg-6">
+					<div class="h2">Verarbeitung gewaltiger Datenmengen</div>
+					<p>Sie planen ein riesiges Bauprojekt und benötigen einen IFC-Viewer, der den Anforderungen großer Datenmengen gewachsen ist? Dann ist der Visoplan IFC-Viewer die perfekte Wahl für Ihre Projektplanung!</p>
+				</div>
+			</div>
+		</div>
+	</section>
+	
+	<!-- feadback -->
+	<section id="section-feadback" class="feadback">
+		<div class="container">
+			<div class="row align-items-center">
+				<div class="col-md-5 col-lg-4 d-none d-md-block">
+					<div class="h1">Schon heute in der Zukunft mit Visoplan</div>
+				</div>
+				<div class="col-md-6 col-lg-5 ml-auto">
+					<img class="feadback__icon d-none d-md-block" src="img/icons/message.svg" alt="">
+					<div class="h3 my-4">Lassen Sie sich von uns beraten</div>
+					<form class="feadback__form">
+						<div class="row">
+							<div class="col">
+								<input type="text" placeholder="E-Mail Adresse">
+							</div>
+							<div class="col">
+								<input type="text" placeholder="Vollständiger Name">
+							</div>
+						</div>
+						<div class="input-group">
+							<textarea rows="7" placeholder="Text eingeben"></textarea>
+							<button class="btn btn-primary btn-sm">Absenden</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- footer -->
+	<footer id="footer" class="footer">
+		<div class="container position-relative">
+			<div class="footer__lang">
+				<div class="mb-3">Choose your language</div>
+				<select id="choose-lang">
+					<option value="0" data-imagesrc="img/icons/germany.svg" selected>Deutsch</option>
+					<option value="1" data-imagesrc="img/icons/united-kingdom.svg">English</option>
+				</select>
+			</div>
+			<div class="row justify-content-center justify-content-sm-between justify-content-lg-start align-items-end align-items-lg-start">
+				<div class="col-6 col-lg-3 order-lg-1 text-center text-sm-left">
+					<a href="/" class="footer__logotype"><img src="img/visoplan-logo.svg" alt="Logo von Visoplan"></a>
+					<p class="mt-5 d-none d-lg-block">Über Visoplan und BIM-Methode auf dem Laufenden bleiben</p>
+					<!-- Begin Mailchimp Signup Form -->
+					<div id="mc_embed_signup">
+						<form action="https://allvr.us19.list-manage.com/subscribe/post?u=de10f897fa7ff90ef0760c5d9&amp;id=f07263726d" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+							<div id="mc_embed_signup_scroll">
+								<div class="input-group mt-4 mt-lg-5">
+									<input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" placeholder="Newsletter">
+									<input type="submit" value="Anmelden" name="subscribe" id="mc-embedded-subscribe" class="btn btn-secondary btn-sm">
+								</div>
+								<div id="mce-responses" class="clear">
+									<div class="response" id="mce-error-response" style="display:none"></div>
+									<div class="response" id="mce-success-response" style="display:none"></div>
+								</div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+								<div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_de10f897fa7ff90ef0760c5d9_f07263726d" tabindex="-1" value=""></div>
+								<div class="clear"></div>
+							</div>
+						</form>
+					</div>
+					<!--End mc_embed_signup-->
+				</div>
+				<div class="col-6 col-md-auto order-lg-3 mt-4 mt-sm-0 ml-md-auto">
+					<div class="footer__socials">
+						<a href="#"><img src="img/icons/linkedin-icon.svg" alt="Icon mit Verlinkung zu LinkedIn"></a>
+						<a href="#"><img src="img/icons/xing-icon.svg" alt="Icon mit Verlinkung zu Xing"></a>
+						<a href="#"><img src="img/icons/youtube-icon.svg" alt="Icon mit Verlinkung zu YouTube"></a>
+						<a href="#"><img src="img/icons/instagram-icon.svg" alt="Icon mit Verlinkung zu Instagram"></a>
+						<a href="#"><img src="img/icons/facebook-icon.svg" alt="Icon mit Verlinkung zu Facebook"></a>
+						<a href="#"><img src="img/icons/twitter-icon.svg" alt="Icon mit Verlinkung zu Twitter"></a>
+					</div>
+				</div>
+				<div class="d-none d-md-block col-lg-auto offset-xl-1 mt-5 mt-lg-0 order-lg-2 ">
+					<nav class="footer__nav">
+						<ul>
+							<li>
+								<a href="#">Live-Demo</a>
+								<ul>
+									<li><a href="#">Live-Demo</a></li>
+									<li><a href="#">Test-Account</a></li>
+								</ul>
+							</li>
+							<li>
+								<a href="#">Über uns</a>
+								<ul>
+									<li><a href="#">Geschichte</a></li>
+									<li><a href="#">Die Vision</a></li>
+									<li><a href="#">Das Team</a></li>
+									<li><a href="#">Partner</a></li>
+									<li><a href="#">Presse</a></li>
+									<li><a href="#">Impressum</a></li>
+									<li><a href="#">AGB</a></li>
+									<li><a href="#">Datenschutz</a></li>
+								</ul>
+							</li>
+							<li>
+								<a href="#">Karriere</a>
+								<ul>
+									<li><a href="#">Offene Positionen</a></li>
+									<li><a href="#">Initiativbewerbung</a></li>
+								</ul>
+							</li>
+							<li><a href="#">Preise</a></li>
+							<li><a href="#">Visoplan-Blog</a></li>
+							<li><a href="#">Support</a></li>
+						</ul>
+					</nav>
+					<div class="footer__copyright">
+						Illustrationen Designed by Freepik<br>
+						<a href="https://freepik.de">www.freepik.de</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+	<!-- scripts -->
+	<script src="js/scripts.min.js"></script>
+	<script src="js/common.min.js"></script>
+</body>
+
+</html>
